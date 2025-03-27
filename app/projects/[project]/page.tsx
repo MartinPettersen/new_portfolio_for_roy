@@ -3,11 +3,13 @@ import React from 'react'
 import { PortableText } from '@portabletext/react'
 
 
-type Props = {
-    params: { project: string }
+type PageProps = {
+  params: { 
+      project: string 
+  }
 }
 
-const page = async ({ params }: Props) => {
+const page = async ({ params }: PageProps) => {
 
     const slug = params.project
     const project = await getProject(slug)
