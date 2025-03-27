@@ -1,16 +1,11 @@
-const contentBlock = {
-    name: "contentBlock",
-    title: "Content Block",
+const hobby = {
+    name: "hobby",
+    title: "Hobby",
     type: "object",
     fields: [
         {
-            name: 'title',
-            title: 'Title',
-            type: 'text',
-        },
-        {
-            name: "content",
-            title: "Content",
+            name: "description",
+            title: "Description",
             type: "array",
             of: [{ type: "block" }]
         },
@@ -20,14 +15,14 @@ const contentBlock = {
             type: "image",
             options: { hotspot: true },
             fields: [
-                {
+                { 
                     name: "alt",
                     title: "Alt",
-                    type: "string"
+                    type: "string" 
                 }
             ]
         }
     ]
 };
 
-export default contentBlock
+export default hobby
