@@ -4,13 +4,13 @@ import { PortableText } from '@portabletext/react'
 
 
 type Props = {
-    params: { project: string }
-}
+  params: Promise<{ project: string }>;
+};
 
-const page = async ({ params }: Props) => {
+const page = async (props: Props) => {
 
-    const slug = await params.project
-    const project = await getProject(slug)
+    const slug = await props.params
+    const project = await getProject(slug.project)
     console.log("single project", project)
   return (
     <div>
