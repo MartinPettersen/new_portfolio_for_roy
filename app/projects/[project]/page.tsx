@@ -3,20 +3,18 @@ import React from 'react'
 import { PortableText } from '@portabletext/react'
 
 
-type Props = {
-  params: Promise<{ project: string }>;
-};
+type Params = Promise<{ project: string }>
 
-const page = async (props: Props) => {
+const page = async ({ params }: { params: Params }) => {
 
-    const slug = await props.params
-    const project = await getProject(slug.project)
+    const {project}  =  await params
+    const projectData = await getProject(project)
     console.log("single project", project)
   return (
     <div>
-        {project.title}
+        {projectData.title}
         <div>
-          {project.content.map((content,i) => (
+          {projectData.content.map((content,i) => (
             content.content && <PortableText key={i} value={content.content}/>
             
           ))}
