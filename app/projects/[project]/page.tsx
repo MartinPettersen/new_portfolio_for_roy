@@ -1,30 +1,39 @@
 import { getProject } from '@/sanity/sanity-utils'
-import React from 'react'
+import { Metadata } from 'next'
 import { PortableText } from '@portabletext/react'
 
-
-type PageProps = {
-  params: { 
-      project: string 
-  }
+type Params = {
+    params: {
+        project: string
+    }
 }
 
-const page = async ({ params }: PageProps) => {
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+    const project = await getProject(params.project)
+    return {
+        title: project.title,
+    }
+}
 
-    const slug = params.project
-    const project = await getProject(slug)
-    console.log("single project", project)
-  return (
-    <div>
-        {project.title}
+export default async function Page({ params }: Params) {
+    const project = await getProject(params.project)
+    
+    return (
         <div>
-          {project.content.map((content,i) => (
-            content.content && <PortableText key={i} value={content.content}/>
-            
-          ))}
+            <h1>{project.title}</h1>
+            <div>
+                {project.content?.map((content, i) => (
+                    content.content && (
+                        <div key={i}>
+                            <PortableText value={content.content}/>
+                        </div>
+                    )
+                ))}
+            </div>
         </div>
-        </div>
-  )
+    )
 }
 
-export default page
+// This is important for Next.js dynamic routes
+export const dynamicParams = true
+export const revalidate = 60 // optional: revalidate every 60 seconds
