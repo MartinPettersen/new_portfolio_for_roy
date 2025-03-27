@@ -18,8 +18,8 @@ const project = {
             },
         },
         {
-            name: "image",
-            title: "Image",
+            name: "coverimage",
+            title: "CoverImage",
             type: "image",
             options: {
                 hotspot: true
@@ -41,8 +41,24 @@ const project = {
             name: 'content',
             title: 'Content',
             type: 'array',
-            of: [{ type: "block"}]
-        }
+            of: [{ type: "contentBlock"}]
+        },
+        {
+            name: 'excerpt',
+            title: 'Excerpt',
+            type: 'string',
+        },
+        {
+            name: 'progress',
+            title: 'Progress',
+            type: 'string',
+        },
+        {
+            name: 'tags',
+            title: 'Tags',
+            type: 'array',
+            of: [{ type: "string"}]
+        },
     ]
 }
 
