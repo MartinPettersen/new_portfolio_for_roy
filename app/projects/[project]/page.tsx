@@ -9,7 +9,7 @@ type Props = {
 
 const page = async ({ params }: Props) => {
 
-    const slug = params.project
+    const slug = await params.project
     const project = await getProject(slug)
     console.log("single project", project)
   return (
