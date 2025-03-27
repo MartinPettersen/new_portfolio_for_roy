@@ -35,7 +35,7 @@ const project = {
         {
             name: "url",
             title: "URL",
-            type: "url"
+            type: "string"
         },
         {
             name: 'content',

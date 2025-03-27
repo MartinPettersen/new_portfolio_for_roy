@@ -3,11 +3,7 @@ const contentBlock = {
     title: "Content Block",
     type: "object",
     fields: [
-        {
-            name: 'title',
-            title: 'Title',
-            type: 'text',
-        },
+        
         {
             name: "content",
             title: "Content",
