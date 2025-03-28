@@ -9,6 +9,11 @@ const about = {
             type: 'string',
         },
         {
+            name: 'quote',
+            title: 'Quote',
+            type: 'text',
+        },
+        {
             name: "portrait",
             title: "Porttrait",
             type: "image",
@@ -26,17 +31,17 @@ const about = {
         {
             name: 'tlf',
             title: 'Tlf',
-            type: 'text',
+            type: 'string',
           },
           {
             name: 'mail',
             title: 'Mail',
-            type: 'text',
+            type: 'string',
           },
           {
             name: 'linkedin',
             title: 'Linkedin',
-            type: 'text',
+            type: 'string',
           },
           {
             name: 'cv', 

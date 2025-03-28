@@ -44,6 +44,7 @@ export async function getAbout() {
         _id,
         _createdAt,
         fullName,
+        quote,
         "portrait": portrait.asset->url,
         tlf,
         mail,

@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectField = async () => {
   const projects = await getProjects();
   return (
-    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center">
+    <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-evenly">
       {projects.map((project) => (
         <ProjectCard key={project._id} project={project} />
       ))}
