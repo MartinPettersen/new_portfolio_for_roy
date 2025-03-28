@@ -39,15 +39,23 @@ export async function getProject(slug: string): Promise<Project> {
 }
 
 export async function getAbout() {
-    const client = createClient({
-        projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-        dataset: process.env.NEXT_PUBLIC_SANITY_DATASET!,
-        apiVersion: "2025-03-04",
-    }) 
-
-    client.fetch(
+    const data = await createClient(clientConfig).fetch(
         groq`*[_type == "about"]{
-        
+        _id,
+        _createdAt,
+        fullName,
+        "portrait": portrait.asset->url,
+        tlf,
+        mail,
+        linkedin,
+        cv,
+        about,
+        hobby[]{
+        description,
+        "image": image.asset->url,
+        "alt": image.alt
+      }
         }`
     )
+    return data[0] || null;
 }

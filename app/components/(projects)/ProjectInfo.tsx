@@ -2,7 +2,7 @@
 import React from "react";
 import { Image } from "next-sanity/image";
 import { Project } from "@/types/Project";
-import { PortableText } from '@portabletext/react'
+import { PortableText } from "@portabletext/react";
 
 type Props = {
   project: Project;
@@ -10,9 +10,6 @@ type Props = {
 };
 
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
-
- 
-
   if (!project) return <p className="text-white">Laster Prosjekt...</p>;
 
   return (
@@ -23,31 +20,33 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
       </div>
       <div className="bg-white h-[70%] overflow-auto">
         <div className="">
-        {project.coverimage ? (
-          <Image
-          className="w-full h-auto "
-          src={project.coverimage}
+          {project.coverimage ? (
+            <Image
+              className="w-full h-auto "
+              src={project.coverimage}
               alt={project.title}
-          width={2000}
-          height={1000}
-          />
-        ) : null}
+              width={2000}
+              height={1000}
+            />
+          ) : null}
         </div>
 
         {project.content?.length && (
           <div>
-                    {project.content.map((content,i) => (
-                      content.content && <PortableText key={i} value={content.content}/>
-                      
-                    ))}
-                  </div>
+            {project.content.map(
+              (content, i) =>
+                content.content && (
+                  <PortableText key={i} value={content.content} />
+                )
+            )}
+          </div>
         )}
       </div>
       <div className="text-white flex w-full h-[10%] items-center justify-evenly">
-            <div className="w-4 h-4 bg-white rounded-full"></div>
-            <div className="w-4 h-4 bg-white rounded-full"></div>
-            <div className="w-4 h-4 bg-white rounded-full"></div>
-            <div className="w-4 h-4 bg-white rounded-full"></div>
+        <div className="w-4 h-4 bg-white rounded-full"></div>
+        <div className="w-4 h-4 bg-white rounded-full"></div>
+        <div className="w-4 h-4 bg-white rounded-full"></div>
+        <div className="w-4 h-4 bg-white rounded-full"></div>
       </div>
     </article>
   );

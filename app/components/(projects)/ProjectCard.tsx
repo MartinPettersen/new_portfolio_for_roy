@@ -33,8 +33,9 @@ const ProjectCard = ({project}: Props) => {
           <Image
             src={coverimage}
             alt={title}
-            width={250}
+            width={100}
             height={100}
+            className="w-[100px] h-[100px] "
           />
         )}
         <div className="w-[80%] px-2 ">
