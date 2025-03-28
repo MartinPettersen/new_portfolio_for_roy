@@ -5,8 +5,8 @@ export default function Home() {
 
 
   return (
-    <div className=" w-screen h-screen  flex items-center justify-center">
-      <main className=" w-full flex items-center justify-center">
+    <div className=" w-screen bg-[#E4D9C4] h-screen  flex items-center justify-center">
+      <main className=" w-full flex items-center justify-center ">
       <ProjectField />
       
       </main>

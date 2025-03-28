@@ -8,12 +8,12 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-screen  flex justify-evenly ">
+    <nav className="w-[50%] h-24 flex justify-evenly ">
       
       {pages.map((page) => (
         <div
           key={page.name}
-          className={`w-[50%] flex items-center justify-center font-medium border-t-2 border-l-2 border-r-2 ${pathname === page.url? "bg-white" : "bg-slate-200"}`}
+          className={`w-[50%] flex items-center rounded-t-xl justify-center font-medium  ${pathname === page.url? "bg-[#E4D9C4]" : "bg-[#B7AF9F]"}`}
         >
           <Link href={`${page.url.toLowerCase()}`} className="text-lg ">
             {page.name}

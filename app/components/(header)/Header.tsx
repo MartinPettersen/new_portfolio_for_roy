@@ -1,9 +1,12 @@
+import { getAbout } from "@/sanity/sanity-utils";
 import Navbar from "../(navigation)/Navbar";
+import HeaderBanner from "./HeaderBanner";
 
-export default function Header() {
+export default async function Header() {
+    const aboutData = await getAbout();
   return (
-    <header className="fixed z-50 h-24 inset-0 flex  w-screen">
-      
+    <header className="z-50 w-full flex flex-col">
+      <HeaderBanner aboutData={aboutData} />
       <Navbar />
     </header>
   );
