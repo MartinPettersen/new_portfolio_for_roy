@@ -1,9 +1,8 @@
 "use client"
-import { File } from '@/types/File'
 import React from 'react'
 
 type Props = {
-    cv: File,
+    cv: string,
     label: string
 }
 
@@ -11,8 +10,8 @@ const DownloadButton = ({label, cv}: Props) => {
 
     
   const downloadCV = () => {
-    if (cv?.asset?.url) {
-        window.open(cv.asset.url, '_blank');
+    if (cv) {
+        window.open(cv, '_blank');
       }
   }
   return (

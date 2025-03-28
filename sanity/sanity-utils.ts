@@ -48,7 +48,7 @@ export async function getAbout() {
         tlf,
         mail,
         linkedin,
-        cv,
+        "cv": cv.asset->url,
         about,
         hobby[]{
         description,
