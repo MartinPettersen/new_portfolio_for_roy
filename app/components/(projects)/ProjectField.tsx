@@ -1,15 +1,10 @@
 import React from "react";
 import { getProjects } from "@/sanity/sanity-utils";
-import Image from "next/image";
-import Link from "next/link";
+import ProjectCard from "./ProjectCard";
 
-const ProjectField = async () => {
-  const projects = await getProjects();
-  console.log("projects", projects);
-  return (
-    <div>
-      {projects.map((project) => (
-        <Link href={`/projects/${project.slug}`} key={project._id}>
+/*
+
+<Link href={`/projects/${project.slug}`} key={project._id}>
           {project.title}
           {project.coverimage && (
             <Image
@@ -19,7 +14,15 @@ const ProjectField = async () => {
               height={100}
             />
           )}
-        </Link>
+        </Link>*/
+
+const ProjectField = async () => {
+  const projects = await getProjects();
+  console.log("projects", projects);
+  return (
+    <div className="flex flex-col items-center justify-center">
+      {projects.map((project) => (
+        <ProjectCard key={project._id} project={project} />
       ))}
     </div>
   );

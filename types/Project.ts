@@ -7,6 +7,7 @@ export type Project = {
     slug: string;
     coverimage: string;
     url: string;
+    excerpt: string;
     content: ContentBlock[];
     progress: string;
     tags: string[];
