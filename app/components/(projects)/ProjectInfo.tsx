@@ -41,9 +41,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const nextProject = () => {
     if (projectIndex < project.content.length - 1) {
       setProjectIndex(projectIndex + 1);
-    } else {
-      setProjectIndex(0);
-    }
+    } 
   };
 
   const goTothisIndex = (index: number) => {

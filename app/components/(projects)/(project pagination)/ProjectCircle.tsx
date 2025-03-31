@@ -9,7 +9,7 @@ type Props = {
 
 const ProjectCircle = ({ projectIndex, index, action }: Props) => {
   return projectIndex != index ? (
-    <div className="w-16 h-16 bg-white rounded-full" onClick={() => action(index)}></div>
+    <div className="w-16 h-16 bg-[#D9D9D9] rounded-full" onClick={() => action(index)}></div>
   ) : (
     <div className="w-16 h-16 bg-[#FF5757] rounded-full"></div>
   );
