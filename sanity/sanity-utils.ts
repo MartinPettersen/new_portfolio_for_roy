@@ -12,7 +12,16 @@ export async function getProjects(): Promise<Project[]> {
         "slug": slug.current,
         "coverimage": coverimage.asset->url,
         url,
-        content,
+        content[]{
+          _type == 'contentBlock' => {
+            content,
+            image{
+              "asset": asset->url, // Fetch the URL here
+              alt
+            }
+          },
+          _type != 'contentBlock' => @ // Keep other block types as they are
+        },
         excerpt,
         progress,
         tags
@@ -29,12 +38,21 @@ export async function getProject(slug: string): Promise<Project> {
         "slug": slug.current,
         "coverimage": coverimage.asset->url,
         url,
-        content,
+        content[]{
+          _type == 'contentBlock' => {
+            content,
+            image{
+              "asset": asset->url, // Fetch the URL here
+              alt
+            }
+          },
+          _type != 'contentBlock' => @ // Keep other block types as they are
+        },
         excerpt,
         progress,
         tags
         }`,
-        {slug}
+        { slug }
     )
 }
 
