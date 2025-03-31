@@ -8,17 +8,17 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-[50%] h-24 flex justify-evenly ">
+    <nav className="w-[50%]  flex justify-start items-end ">
       
       {pages.map((page) => (
-        <div
+        <Link href={`${page.url.toLowerCase()}`}
           key={page.name}
-          className={`w-[50%] flex items-center rounded-t-xl justify-center font-medium  ${pathname === page.url? "bg-[#E4D9C4]" : "bg-[#B7AF9F]"}`}
+          className={`${pathname === page.url? "w-[50%] h-24" : "w-[45%] h-20"}   flex items-center rounded-t-xl justify-center font-medium  ${pathname === page.url? "bg-[#E4D9C4]" : "bg-[#B7AF9F]"}`}
         >
-          <Link href={`${page.url.toLowerCase()}`} className="text-lg ">
+          <p className="text-lg ">
             {page.name}
-          </Link>
-        </div>
+          </p>
+        </Link>
       ))}
     </nav>
   );

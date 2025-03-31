@@ -15,7 +15,7 @@ const page = async () => {
     </div>)
 
   return (
-    <div className="flex flex-col bg-[#E4D9C4] items-center justify-center">
+    <div className="flex flex-col rounded-tr-2xl rounded-br-xl rounded-bl-xl bg-[#E4D9C4] items-center justify-center">
       <div className="w-full p-4  flex items-center justify-evenly">
         {aboutData.portrait ? (
           <Image

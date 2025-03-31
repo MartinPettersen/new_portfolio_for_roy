@@ -35,6 +35,7 @@ const project = {
         {
             name: "url",
             title: "URL",
+            description: "Url for å linke til prosjekter på andre sider",
             type: "string"
         },
         {

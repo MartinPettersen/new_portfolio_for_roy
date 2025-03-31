@@ -15,7 +15,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   return (
     <article className="bg-black h-full flex flex-col items-center justify-center">
       <div className="text-white font-bold text-xl flex w-[90%] h-[20%] items-center justify-between">
-        <h2 className="">{project.title}</h2>
+        <h2 className="border-b-2 border-white">{project.title}</h2>
         <button onClick={() => setToggleDisplay(false)}>X</button>
       </div>
       <div className="bg-white h-[70%] overflow-auto">
@@ -25,14 +25,14 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
               className="w-full h-auto "
               src={project.coverimage}
               alt={project.title}
-              width={2000}
-              height={1000}
+              width={100}
+              height={100}
             />
           ) : null}
         </div>
 
         {project.content?.length && (
-          <div>
+          <div className="text-white">
             {project.content.map(
               (content, i) =>
                 content.content && (
