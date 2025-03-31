@@ -11,11 +11,8 @@ type Props = {
 const ProjectDisplay = ({ setToggleDisplay, project }: Props) => {
     return (
     <div className="">
-      <div
-        className="w-screen left-0 top-0 h-screen bg-slate-800/60 z-[100] fixed"
-        onClick={() => setToggleDisplay(false)}
-      ></div>
-      <div className="z-[200] fixed left-0 top-[30vh] w-screen h-[50%]">
+      
+      <div className="z-[200] flex items-center justify-center fixed left-0 top-0 w-screen h-screen ">
         <ProjectInfo project={project} setToggleDisplay={setToggleDisplay}/>
       </div>
     </div>
