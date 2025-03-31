@@ -24,32 +24,31 @@ type Props = {
                 */
 
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
+  const [projectIndex, setProjectIndex] = useState(0);
 
-  const [projectIndex, setProjectIndex] = useState(0)
-  
-  console.log("project in projectInfo", project)
+  console.log("project in projectInfo", project);
 
   if (!project) return <p className="text-white">Laster Prosjekt...</p>;
-  
+
   const goback = () => {
     if (projectIndex > 0) {
-      setProjectIndex(projectIndex -1)
+      setProjectIndex(projectIndex - 1);
     } else {
-      setProjectIndex(0)
+      setProjectIndex(0);
     }
-  }
+  };
 
   const nextProject = () => {
-    if (projectIndex < (project.content.length -1)) {
-      setProjectIndex(projectIndex +1)
+    if (projectIndex < project.content.length - 1) {
+      setProjectIndex(projectIndex + 1);
     } else {
-      setProjectIndex(0)
+      setProjectIndex(0);
     }
-  }
+  };
 
   const goTothisIndex = (index: number) => {
-    setProjectIndex(index )
-  }
+    setProjectIndex(index);
+  };
 
   return (
     <div className="flex flex-col w-screen h-screen items-center justify-center">
@@ -58,33 +57,35 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         onClick={() => setToggleDisplay(false)}
       ></div>
       <article className="bg-[url('/postcard_texture.jfif')] z-[200] w-[63%] h-[65%] flex flex-col items-center justify-center">
-        <div className="flex items-center justify-evenly w-full h-[80%] ">
+        <div className="flex items-center justify-evenly w-[94%] h-[80%] ">
           <div className="w-[50%]">
-          {project.content &&
-                  project.content.length > 0 &&
-                  project.content[projectIndex].image && (
-                    <Image
-                    className=" pl-4"
-                    src={project.content[projectIndex].image.asset}
-                    alt={project.content[projectIndex].image.alt || project.title}
-                    width={400}
-                    height={400}
-                  />
+            {project.content &&
+              project.content.length > 0 &&
+              project.content[projectIndex].image && (
+                <Image
+                  className=" pl-4"
+                  src={project.content[projectIndex].image.asset}
+                  alt={project.content[projectIndex].image.alt || project.title}
+                  width={400}
+                  height={400}
+                />
               )}
           </div>
 
-          <div className="h-full border-l-2"></div>
+          <div className="h-full border-l-2 border-stone-600/70"></div>
           <div className="flex flex-col w-[40%] h-full">
-            <h2 className="border-b-2 font-bold text-xl border-black">
+            <h2 className="border-b-2 font-bold text-xl border-stone-600/70">
               {project.title}
             </h2>
 
             {project.content?.length && (
-              <div className="mt-8 underline w-full">
+              <div className="mt-8 w-full text-with-underline text-stone-800/90">
                 {project.content &&
                   project.content.length > 0 &&
-                  project.content[projectIndex].content && (
-                    <PortableText value={project.content[projectIndex].content} />
+                  project.content[projectIndex]?.content && (
+                    <PortableText
+                      value={project.content[projectIndex].content}
+                    />
                   )}
               </div>
             )}
@@ -92,13 +93,18 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         </div>
       </article>
       <div className="text-white mt-8 w-[63%] flex z-[200] h-[10%] items-center justify-evenly">
-        <ProjectButtonLeft action={goback}/>
+        <ProjectButtonLeft action={goback} />
         {project.content?.length && (
           <>
             {project.content.map(
               (content, i) =>
                 content.content && (
-                  <ProjectCircle action={goTothisIndex} key={i} index={i} projectIndex={projectIndex} />
+                  <ProjectCircle
+                    action={goTothisIndex}
+                    key={i}
+                    index={i}
+                    projectIndex={projectIndex}
+                  />
                 )
             )}
           </>

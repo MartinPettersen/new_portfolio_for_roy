@@ -6,7 +6,7 @@ type Props = {
 
 const ProjectButtonRight = ({action}: Props) => {
   return (
-    <div onClick={() => action()} className='bg-red-600'>Right</div>
+    <div onClick={() => action()} className='bg-[#FF5757]'>Right</div>
   )
 }
 
