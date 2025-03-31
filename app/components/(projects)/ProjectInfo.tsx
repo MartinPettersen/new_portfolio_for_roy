@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Image } from "next-sanity/image";
 import { Project } from "@/types/Project";
 import { PortableText } from "@portabletext/react";
@@ -24,7 +24,33 @@ type Props = {
                 */
 
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
+
+  const [projectIndex, setProjectIndex] = useState(0)
+  
+  console.log("project in projectInfo", project)
+
   if (!project) return <p className="text-white">Laster Prosjekt...</p>;
+  
+  const goback = () => {
+    if (projectIndex > 0) {
+      setProjectIndex(projectIndex -1)
+    } else {
+      setProjectIndex(0)
+    }
+  }
+
+  const nextProject = () => {
+    if (projectIndex < (project.content.length -1)) {
+      setProjectIndex(projectIndex +1)
+    } else {
+      setProjectIndex(0)
+    }
+  }
+
+  const goTothisIndex = (index: number) => {
+    setProjectIndex(index )
+  }
+
   return (
     <div className="flex flex-col w-screen h-screen items-center justify-center">
       <div
@@ -36,11 +62,11 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
           <div className="w-[50%]">
           {project.content &&
                   project.content.length > 0 &&
-                  project.content[0].image && (
+                  project.content[projectIndex].image && (
                     <Image
                     className=" pl-4"
-                    src={project.content[0].image.asset}
-                    alt={project.content[0].image.alt || project.title}
+                    src={project.content[projectIndex].image.asset}
+                    alt={project.content[projectIndex].image.alt || project.title}
                     width={400}
                     height={400}
                   />
@@ -57,8 +83,8 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
               <div className="mt-8 underline w-full">
                 {project.content &&
                   project.content.length > 0 &&
-                  project.content[0].content && (
-                    <PortableText value={project.content[0].content} />
+                  project.content[projectIndex].content && (
+                    <PortableText value={project.content[projectIndex].content} />
                   )}
               </div>
             )}
@@ -66,19 +92,19 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         </div>
       </article>
       <div className="text-white mt-8 w-[63%] flex z-[200] h-[10%] items-center justify-evenly">
-        <ProjectButtonLeft />
+        <ProjectButtonLeft action={goback}/>
         {project.content?.length && (
           <>
             {project.content.map(
               (content, i) =>
                 content.content && (
-                  <ProjectCircle key={i} index={i} projectIndex={2} />
+                  <ProjectCircle action={goTothisIndex} key={i} index={i} projectIndex={projectIndex} />
                 )
             )}
           </>
         )}
 
-        <ProjectButtonRight />
+        <ProjectButtonRight action={nextProject} />
       </div>
     </div>
   );

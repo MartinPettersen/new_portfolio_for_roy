@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ProjectButtonLeft = () => {
+type Props = {
+    action: () => void
+}
+
+const ProjectButtonLeft = ({action}: Props) => {
   return (
-    <div className='bg-red-600'>Left</div>
+    <div onClick={() => action()} className='bg-red-600'>Left</div>
   )
 }
 

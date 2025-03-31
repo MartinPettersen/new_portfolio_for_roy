@@ -3,11 +3,13 @@ import React from "react";
 type Props = {
   projectIndex: number;
   index: number;
+  action: (index: number) => void
+
 };
 
-const ProjectCircle = ({ projectIndex, index }: Props) => {
+const ProjectCircle = ({ projectIndex, index, action }: Props) => {
   return projectIndex != index ? (
-    <div className="w-16 h-16 bg-white rounded-full"></div>
+    <div className="w-16 h-16 bg-white rounded-full" onClick={() => action(index)}></div>
   ) : (
     <div className="w-16 h-16 bg-red-600 rounded-full"></div>
   );
