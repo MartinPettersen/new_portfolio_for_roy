@@ -40,3 +40,7 @@ body {
   height: 1px; 
   background-color: rgba(71, 85, 105, 0.7) 
 }
+
+.shadow-custom {
+  box-shadow: 12px -10px 7px rgba(40, 49, 60, 0.7) ;
+}

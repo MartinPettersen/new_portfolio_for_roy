@@ -5,7 +5,7 @@ import HeaderBanner from "./HeaderBanner";
 export default async function Header() {
     const aboutData = await getAbout();
   return (
-    <header className="z-50 w-full flex flex-col">
+    <header className="w-full flex flex-col">
       <HeaderBanner aboutData={aboutData} />
       <Navbar />
     </header>
