@@ -39,12 +39,12 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen items-center justify-center">
+    <div className="flex flex-col w-screen h-screen items-center justify-center fixed inset-0">
       <div
-        className="w-screen left-0 top-0 h-screen bg-slate-800/80 z-[100] fixed"
+        className="w-screen left-0 top-0 h-screen bg-slate-800/80 fixed z-[9000]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[url('/postcard_texture.jfif')] z-[202] w-[63%] h-[65%] flex flex-col items-center justify-center">
+      <article className="bg-[url('/postcard_texture.jfif')] z-[9100] relative w-[63%] h-[65%] flex flex-col items-center justify-center">
         <div className="flex items-center justify-evenly w-[94%] h-[80%] ">
           <div className="w-[50%]">
             {project.content &&
