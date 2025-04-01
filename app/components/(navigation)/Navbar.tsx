@@ -8,7 +8,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="w-[50%] relative flex justify-start items-end ">
+    <nav className="w-[50%] flex justify-start items-end ">
       
       {pages.map((page) => (
         <Link href={`${page.url.toLowerCase()}`}

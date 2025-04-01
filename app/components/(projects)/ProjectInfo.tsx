@@ -12,11 +12,8 @@ type Props = {
   setToggleDisplay: (value: boolean) => void;
 };
 
-
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const [projectIndex, setProjectIndex] = useState(0);
-
-  console.log("project in projectInfo", project);
 
   if (!project) return <p className="text-white">Laster Prosjekt...</p>;
 
@@ -31,7 +28,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const nextProject = () => {
     if (projectIndex < project.content.length - 1) {
       setProjectIndex(projectIndex + 1);
-    } 
+    }
   };
 
   const goTothisIndex = (index: number) => {
@@ -39,19 +36,19 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   };
 
   return (
-    <div className="flex flex-col w-screen h-screen items-center justify-center fixed inset-0">
+    <div className="fixed inset-0 z-[10000] flex flex-col w-screen h-screen items-center justify-center">
       <div
-        className="w-screen left-0 top-0 h-screen bg-slate-800/80 fixed z-[9000]"
+        className="w-screen h-screen bg-slate-800/80 absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[url('/postcard_texture.jfif')] z-[9100] relative w-[63%] h-[65%] flex flex-col items-center justify-center">
-        <div className="flex items-center justify-evenly w-[94%] h-[80%] ">
+      <article className="bg-[url('/postcard_texture.jfif')] relative z-[10000] w-[63%] h-[65%] flex flex-col items-center justify-center">
+        <div className="flex items-center justify-evenly w-[94%] h-[80%]">
           <div className="w-[50%]">
             {project.content &&
               project.content.length > 0 &&
               project.content[projectIndex].image && (
                 <Image
-                  className=" pl-4"
+                  className="pl-4"
                   src={project.content[projectIndex].image.asset}
                   alt={project.content[projectIndex].image.alt || project.title}
                   width={400}
@@ -80,7 +77,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
           </div>
         </div>
       </article>
-      <div className="text-white mt-8 w-[63%] flex z-[200] h-[10%] items-center justify-evenly">
+      <div className="text-white mt-8 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly">
         <ProjectButtonLeft action={goback} />
         {project.content?.length && (
           <>
@@ -97,7 +94,6 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
             )}
           </>
         )}
-
         <ProjectButtonRight action={nextProject} />
       </div>
     </div>

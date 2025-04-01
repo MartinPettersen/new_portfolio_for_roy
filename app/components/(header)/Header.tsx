@@ -1,5 +1,4 @@
 import { getAbout } from "@/sanity/sanity-utils";
-import Navbar from "../(navigation)/Navbar";
 import HeaderBanner from "./HeaderBanner";
 
 export default async function Header() {
@@ -7,7 +6,6 @@ export default async function Header() {
   return (
     <header className="w-full flex flex-col">
       <HeaderBanner aboutData={aboutData} />
-      <Navbar />
     </header>
   );
 }
