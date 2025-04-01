@@ -71,12 +71,12 @@ const page = async () => {
                 ) : null}
                 <div className="flex flex-col m-4 gap-4">
                   {hobby.description?.length && (
-                    <p>
+                    <>
                       {hobby.description.map(
                         (content, i) =>
                           content && <PortableText key={i} value={content} />
                       )}
-                    </p>
+                    </>
                   )}
                 </div>
               </div>

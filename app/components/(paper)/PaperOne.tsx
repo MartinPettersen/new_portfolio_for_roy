@@ -32,8 +32,8 @@ const PaperOne = ({active, timer}: Props) => {
     }
 
   return (
-    <div className={`bg-[#B0956B] ${position === "front" ? "ml-[80vh] mt-[-1vh] z-[49]": "ml-[88vh] mt-[0vh] z-[3]" } w-[50vw] h-[50vh] absolute transition-all duration-1000 
-    ${animating? "rotate-5 mt-[4vh]": position === "front" ? "-rotate-12" : "-rotate-10"}
+    <div className={`bg-[#B0956B]  ${position === "front" ? "ml-[80vh] mt-[-1vh] z-[49]": "ml-[88vh] mt-[0vh] z-[3]" } w-[50vw] h-[50vh] absolute transition-all duration-1000 
+    ${animating? "rotate-5 mt-[4vh]": position === "front" ? "-rotate-12 shadow-weak" : "-rotate-10 shadow-weak"}
     `}>PaperOne</div>
   )
 }

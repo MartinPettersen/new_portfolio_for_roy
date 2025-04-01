@@ -12,16 +12,6 @@ type Props = {
   setToggleDisplay: (value: boolean) => void;
 };
 
-/*
-{project.content.map(
-                  (content, i) =>
-                    content.content && (
-                      <PortableText key={i} value={content.content} />
-
-                    )
-                )}
-
-                */
 
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const [projectIndex, setProjectIndex] = useState(0);
@@ -54,7 +44,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen left-0 top-0 h-screen bg-slate-800/80 z-[100] fixed"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[url('/postcard_texture.jfif')] z-[200] w-[63%] h-[65%] flex flex-col items-center justify-center">
+      <article className="bg-[url('/postcard_texture.jfif')] z-[202] w-[63%] h-[65%] flex flex-col items-center justify-center">
         <div className="flex items-center justify-evenly w-[94%] h-[80%] ">
           <div className="w-[50%]">
             {project.content &&
