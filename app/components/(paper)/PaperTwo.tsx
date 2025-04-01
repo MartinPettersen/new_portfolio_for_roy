@@ -10,7 +10,7 @@ const PaperTwo = ({active, timer}: Props) => {
 
 
 
-    const [position, setPosition] = useState("back")
+    const [position, setPosition] = useState(active ? "front" : "back")
     const [animating, setAnimating] = useState(false)
 
     useEffect(() => {
@@ -35,8 +35,8 @@ const PaperTwo = ({active, timer}: Props) => {
 
 
   return (
-    <div className={`bg-[#CFCC68] ${position === "front" ? "ml-[80vh] mt-[-1vh] z-[41]": "ml-[88vh] mt-[0vh] z-[40]" } w-[50vw] h-[50vh] absolute transition-all duration-1000 
-    ${animating? "rotate-0": position === "front" ? "-rotate-12" : "-rotate-10"}
+    <div className={`bg-[#CFCC68] ${position === "front" ? "ml-[80vh] mt-[-1vh] z-[49]": "ml-[88vh] mt-[0vh] z-[3]" } w-[50vw] h-[50vh] absolute transition-all duration-1000 
+    ${animating? "rotate-5 mt-[4vh] ": position === "front" ? "-rotate-12" : "-rotate-10"}
     `}>PaperOne</div>
   )
 }
