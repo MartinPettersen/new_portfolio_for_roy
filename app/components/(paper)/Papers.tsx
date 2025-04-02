@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 const Papers = () => {
   const pathname = usePathname();
-  const timer = 500;
+  const timer = 150;
 
   return (
     <>

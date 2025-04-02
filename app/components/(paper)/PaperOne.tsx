@@ -32,7 +32,7 @@ const PaperOne = ({active, timer}: Props) => {
     }
 
   return (
-    <div className={`bg-[#FFAA75]  ${position === "front" ? "ml-[80vh] mt-[-1vh] z-[9]": "ml-[88vh] mt-[0vh] z-[3]" } w-[50vw] h-[50vh] absolute transition-all duration-1000 
+    <div className={`bg-[#FFAA75]  ${position === "front" ? "ml-[80vh] mt-[-1vh] z-[9]": "ml-[88vh] mt-[0vh] z-[3]" } w-[50vw] h-[50vh] absolute transition-all duration-300 
     ${animating? "rotate-5 mt-[4vh]": position === "front" ? "-rotate-12 shadow-weak" : "-rotate-10 shadow-weak"}
     `}>PaperOne</div>
   )
