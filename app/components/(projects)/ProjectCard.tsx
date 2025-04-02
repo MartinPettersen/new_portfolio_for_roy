@@ -27,7 +27,7 @@ const ProjectCard = ({ project }: Props) => {
 
       <article
         key={_id}
-        className="flex flex-col items-center w-[410px] h-[252px] justify-between border-2 shadow-custom  bg-fixed bg-center bg-no-repeat bg-cover"
+        className="flex flex-col items-center w-[410px] h-[252px] justify-between shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
         style={{
           backgroundImage: `url(${coverimage})`,
