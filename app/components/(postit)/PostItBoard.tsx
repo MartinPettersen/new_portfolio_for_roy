@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import OrangeNote from "./(postitnotes)/OrangeNote";
+import PostOrganizer from "./PostOrganizer";
 
 type Props = {
   toggled: boolean;
@@ -12,7 +12,6 @@ const PostItBoard = ({ toggled }: Props) => {
 
   const [postIts, setPostIts] = useState<{ x: number; y: number }[]>([])
 
-    const quotes = ["This is a quote", "this is a different quote"];
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -48,7 +47,7 @@ const PostItBoard = ({ toggled }: Props) => {
             left: `${postIt.x}px`,
             top: `${postIt.y}px`,
           }}>
-            <OrangeNote label={quotes[0]}/>
+            <PostOrganizer />
           </div>)
         ) : (
           <></>
