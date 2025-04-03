@@ -38,7 +38,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   return (
     <div className="fixed inset-0 z-[10000] flex flex-col w-screen h-screen items-center justify-center">
       <div
-        className="w-screen h-screen bg-slate-800/80 absolute z-[9999]"
+        className="w-screen h-screen bg-[#D9D9D92B] backdrop-blur-sm absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
       <article className="bg-[#E8D5B0]  relative z-[10000] w-[1294px] h-[716px] flex flex-col items-center justify-center">
