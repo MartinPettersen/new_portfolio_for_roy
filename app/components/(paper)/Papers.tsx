@@ -9,10 +9,10 @@ const Papers = () => {
   const timer = 150;
 
   return (
-    <>
+    <div className="flex w-screen justify-center">
       <PaperOne active={pathname === "/" } timer={timer} />
       <PaperTwo active={pathname === "/about"} timer={timer} />
-    </>
+    </div>
   );
 };
 
