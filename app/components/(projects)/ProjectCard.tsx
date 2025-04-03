@@ -27,11 +27,13 @@ const ProjectCard = ({ project }: Props) => {
 
       <article
         key={_id}
-        className="flex flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
+        className="flex flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
         style={{
           backgroundImage: `url(${coverimage})`,
-        }}
+          opacity: 0.7,
+        }
+      }
       >
         
         <div className="w-[80%] flex flex-col items-center h-[80%] justify-center px-2 ">
