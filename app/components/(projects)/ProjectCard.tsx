@@ -4,6 +4,7 @@ import { Project } from "@/types/Project";
 import TagButton from "./TagButton";
 import ProjectDisplay from "./ProjectDisplay";
 import { createPortal } from "react-dom";
+import ProgressBar from "./ProgressBar";
 
 type Props = {
   project: Project;
@@ -27,7 +28,7 @@ const ProjectCard = ({ project }: Props) => {
 
       <article
         key={_id}
-        className="flex flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
+        className="flex py-2 px-1 flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
         style={{
           backgroundImage: `url(${coverimage})`,
@@ -42,10 +43,11 @@ const ProjectCard = ({ project }: Props) => {
             {excerpt}
           </p>
         </div>
-        <div className="flex items-start w-full h-[20%] p-4">
+        <div className="flex items-start w-full  p-0">
 
         <TagButton label="tag #1" url="" />
         </div>
+        <ProgressBar percentageCompleted={100} />
       </article>
     </div>
   );
