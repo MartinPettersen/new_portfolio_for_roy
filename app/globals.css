@@ -72,3 +72,7 @@ body {
 .font-rubik {
   font-family: var(--font-rubik);
 }
+
+.font-work-sans {
+  font-family: var(--font-work-sans);
+}

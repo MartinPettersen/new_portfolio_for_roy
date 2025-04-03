@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libre_Baskerville, Rubik } from "next/font/google";
+import { Geist, Geist_Mono, Libre_Baskerville, Rubik, Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "./components/(header)/Header";
 import Papers from "./components/(paper)/Papers";
@@ -27,6 +27,12 @@ const rubik = Rubik({
   subsets:["latin"],
 })
 
+const workSans = Work_Sans({
+  weight: "400",
+  variable: "--font-work-sans",
+  subsets:["latin"],
+})
+
 export const metadata: Metadata = {
   title: "Hagalid's Portfolio",
   description: "Hagalid's Portfolio side",
@@ -40,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${rubik.variable} antialiased md:p-6 pt-8 md:pt-0 relative `}
+        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${rubik.variable} ${workSans.variable} antialiased md:p-6 pt-8 md:pt-0 relative `}
       >
         <div className="z-[1] max-w-full ">
           <Header />
