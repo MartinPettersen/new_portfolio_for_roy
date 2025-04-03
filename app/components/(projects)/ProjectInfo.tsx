@@ -58,7 +58,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
           </div>
 
           <div className="flex items-center  h-[84%]  flex-col w-[40%] ">
-            <h2 className="font-bold text-xl border-stone-600/70">
+            <h2 className="font-bold font-rubik text-xl border-stone-600/70">
               {project.title}
             </h2>
 

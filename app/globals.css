@@ -68,3 +68,7 @@ body {
 .font-libre-baskerville {
   font-family: var(--font-libre-baskerville);
 }
+
+.font-rubik {
+  font-family: var(--font-rubik);
+}
