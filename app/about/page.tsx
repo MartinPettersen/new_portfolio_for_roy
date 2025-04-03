@@ -28,7 +28,7 @@ const page = async () => {
           <></>
         )}
         <div className="w-[50%] m-4">
-          <h3 className="font-bold text-xl">About {aboutData.fullName}</h3>
+          <h3 className="font-bold text-xl font-libre-baskerville">About {aboutData.fullName}</h3>
         </div>
       </div>
       <div className="w-full flex items-center justify-evenly">
