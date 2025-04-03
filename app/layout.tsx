@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Libre_Baskerville, Rubik, Work_Sans, Space_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Libre_Baskerville, Rubik, Work_Sans, Space_Mono, Permanent_Marker } from "next/font/google";
 import "./globals.css";
 import Header from "./components/(header)/Header";
 import Papers from "./components/(paper)/Papers";
@@ -39,10 +39,17 @@ const spaceMono = Space_Mono({
   subsets:["latin"],
 })
 
+const permanentMarker = Permanent_Marker({
+  weight: "400",
+  variable: "--font-permanent-marker",
+  subsets:["latin"],
+})
+
 export const metadata: Metadata = {
   title: "Hagalid's Portfolio",
   description: "Hagalid's Portfolio side",
 };
+
 
 export default function RootLayout({
   children,
@@ -52,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${rubik.variable} ${workSans.variable} ${spaceMono.variable} antialiased md:p-6 pt-8 md:pt-0 relative `}
+        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${rubik.variable} ${workSans.variable} ${spaceMono.variable} ${permanentMarker.variable} antialiased md:p-6 pt-8 md:pt-0 relative `}
       >
         <div className="z-[1] max-w-full ">
           <Header />

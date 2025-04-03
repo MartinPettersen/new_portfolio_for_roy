@@ -80,3 +80,7 @@ body {
 .font-space-mono {
   font-family: var(--font-space-mono);
 }
+
+.font-permanent-marker {
+  font-family: var(--font-permanent-marker)
+}
