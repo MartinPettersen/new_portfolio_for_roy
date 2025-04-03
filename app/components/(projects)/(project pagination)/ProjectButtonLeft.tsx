@@ -5,21 +5,11 @@ type Props = {
 };
 
 const ProjectButtonLeft = ({ action }: Props) => {
-  return (
-    <svg
-      onClick={() => action()}
-      width="100"
-      height="117"
-      viewBox="0 0 100 117"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7.93005e-07 58.5L99.75 0.909311L99.75 116.091L7.93005e-07 58.5Z"
-        fill="#FF5757"
-      />
-    </svg>
-  );
+  return <svg className={"svg-shadow"} onClick={() => action()}  width="72" height="81" viewBox="0 0 72 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.99999 45.6962C-1.00001 43.3867 -1 37.6133 3 35.3039L62.25 1.09585C66.25 -1.21355 71.25 1.6732 71.25 6.292L71.25 74.708C71.25 79.3268 66.25 82.2136 62.25 79.9042L2.99999 45.6962Z" fill="#8E9FB6"/>
+</svg>
+
+  
 };
 
 export default ProjectButtonLeft;

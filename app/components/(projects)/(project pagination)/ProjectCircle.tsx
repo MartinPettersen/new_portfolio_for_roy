@@ -3,15 +3,21 @@ import React from "react";
 type Props = {
   projectIndex: number;
   index: number;
-  action: (index: number) => void
-
+  action: (index: number) => void;
 };
 
 const ProjectCircle = ({ projectIndex, index, action }: Props) => {
-  return projectIndex != index ? (
-    <div className="w-16 h-16 bg-[#D9D9D9] rounded-full" onClick={() => action(index)}></div>
-  ) : (
-    <div className="w-16 h-16 bg-[#FF5757] rounded-full"></div>
+  return (
+    <button
+      className="w-14 h-14 bg-[#F3E9D6] inner-shadow flex items-center justify-center rounded-full"
+      onClick={() => action(index)}
+    >
+      {projectIndex != index ? (
+        <></>
+      ) : (
+        <div className="w-6 h-6 bg-[#8E9FB6] rounded-full"></div>
+      )}
+    </button>
   );
 };
 

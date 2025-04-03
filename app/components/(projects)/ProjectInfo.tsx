@@ -41,7 +41,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen h-screen bg-slate-800/80 absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[url('/postcard_texture.jfif')] relative z-[10000] w-[63%] h-[65%] flex flex-col items-center justify-center">
+      <article className="bg-[#E8D5B0]  relative z-[10000] w-[63%] h-[65%] flex flex-col items-center justify-center">
         <div className="flex items-center justify-evenly w-[94%] h-[80%]">
           <div className="w-[50%]">
             {project.content &&
@@ -57,14 +57,13 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
               )}
           </div>
 
-          <div className="h-full border-l-2 border-stone-600/70"></div>
           <div className="flex flex-col w-[40%] h-full">
-            <h2 className="border-b-2 font-bold text-xl border-stone-600/70">
+            <h2 className="font-bold text-xl border-stone-600/70">
               {project.title}
             </h2>
 
             {project.content?.length && (
-              <div className="mt-8 w-full text-with-underline text-stone-800/90">
+              <div className="mt-8 w-full text-stone-800/90">
                 {project.content &&
                   project.content.length > 0 &&
                   project.content[projectIndex]?.content && (
@@ -76,7 +75,6 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
             )}
           </div>
         </div>
-      </article>
       <div className="text-white mt-8 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly">
         <ProjectButtonLeft action={goback} />
         {project.content?.length && (
@@ -96,6 +94,8 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         )}
         <ProjectButtonRight action={nextProject} />
       </div>
+      </article>
+
     </div>
   );
 };
