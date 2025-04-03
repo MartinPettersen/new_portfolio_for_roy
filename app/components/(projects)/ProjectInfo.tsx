@@ -41,8 +41,8 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen h-screen bg-slate-800/80 absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[#E8D5B0]  relative z-[10000] w-[63%] h-[65%] flex flex-col items-center justify-center">
-        <div className="flex items-center justify-evenly w-[94%] h-[80%]">
+      <article className="bg-[#E8D5B0]  relative z-[10000] w-[1294px] h-[716px] flex flex-col items-center justify-center">
+        <div className="flex items-center justify-evenly w-[94%] h-[80%] ">
           <div className="w-[50%]">
             {project.content &&
               project.content.length > 0 &&
@@ -51,13 +51,13 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
                   className="pl-4"
                   src={project.content[projectIndex].image.asset}
                   alt={project.content[projectIndex].image.alt || project.title}
-                  width={400}
-                  height={400}
+                  width={588}
+                  height={493}
                 />
               )}
           </div>
 
-          <div className="flex flex-col w-[40%] h-full">
+          <div className="flex items-center  h-[84%]  flex-col w-[40%] ">
             <h2 className="font-bold text-xl border-stone-600/70">
               {project.title}
             </h2>
@@ -75,7 +75,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
             )}
           </div>
         </div>
-      <div className="text-white mt-8 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly">
+      <div className="text-white mt-2 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly">
         <ProjectButtonLeft action={goback} />
         {project.content?.length && (
           <>

@@ -5,6 +5,7 @@ import ClipBoardButton from "../components/(about)/ClipBoardButton";
 import { getAbout } from "@/sanity/sanity-utils";
 import { Hobby } from "@/types/Hobby";
 import { PortableText, PortableTextBlock } from "@portabletext/react";
+import ImageContainer from "../components/(about)/ImageContainer";
 
 const page = async () => {
   const aboutData = await getAbout();
@@ -21,13 +22,8 @@ const page = async () => {
     <div className="flex flex-col rounded-t-2xl rounded-br-2xl rounded-bl-2xl shadow-custom z-[12] relative bg-[#E8D5B0] items-center justify-center">
       <div className="w-full p-4  flex items-center justify-evenly">
         {aboutData.portrait ? (
-          <Image
-            className="w-[50%] h-auto"
-            src={aboutData.portrait}
-            alt={aboutData.fullName || "Portrait Image"}
-            width={2000}
-            height={1000}
-          />
+
+          <ImageContainer portrait={aboutData.portrait} fullName={aboutData.fullName} />
         ) : (
           <></>
         )}
