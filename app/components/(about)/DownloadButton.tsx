@@ -15,7 +15,7 @@ const DownloadButton = ({label, cv}: Props) => {
       }
   }
   return (
-    <button onClick={() => downloadCV()} className="border-2 px-2">{label}</button>
+    <button onClick={() => downloadCV()} className="border-2 px-2 hover:cursor-pointer">{label}</button>
 
   )
 }

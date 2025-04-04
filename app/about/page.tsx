@@ -1,11 +1,11 @@
 import React from "react";
 import { Image } from "next-sanity/image";
-import DownloadButton from "../components/(about)/DownloadButton";
-import ClipBoardButton from "../components/(about)/ClipBoardButton";
+
 import { getAbout } from "@/sanity/sanity-utils";
 import { Hobby } from "@/types/Hobby";
 import { PortableText, PortableTextBlock } from "@portabletext/react";
 import ImageContainer from "../components/(about)/ImageContainer";
+import AboutButtonField from "../components/(about)/AboutButtonField";
 
 const page = async () => {
   const aboutData = await getAbout();
@@ -41,20 +41,8 @@ const page = async () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex items-center justify-evenly">
-        {aboutData.tlf ? (
-          <ClipBoardButton text={aboutData.tlf} label={"tlf"} />
-        ) : null}
-        {aboutData.mail ? (
-          <ClipBoardButton text={aboutData.mail} label={"mail"} />
-        ) : null}
 
-        {aboutData.linkedin ? (
-          <ClipBoardButton text={aboutData.linkedin} label={"linkedin"} />
-        ) : null}
-
-        {aboutData.cv ? <DownloadButton label="cv" cv={aboutData.cv} /> : null}
-      </div>
+      <AboutButtonField aboutData={aboutData}/>
 
       <h2 className="font-bold">Hobby og andre verk</h2>
       <div>

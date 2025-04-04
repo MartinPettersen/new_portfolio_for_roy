@@ -8,7 +8,7 @@ type Props = {
 
 const ClipBoardButton = ({text, label}: Props) => {
   return (
-    <p className="border-2 px-2" onClick={() => {navigator.clipboard.writeText(text)}}>{label}</p>
+    <p className="border-2 px-2 hover:cursor-pointer" onClick={() => {navigator.clipboard.writeText(text)}}>{label}</p>
 
   )
 }
