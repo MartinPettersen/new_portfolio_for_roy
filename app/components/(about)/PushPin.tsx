@@ -44,7 +44,7 @@ const PushPin = () => {
       <path
         d="M15.811 106C17.7161 107.032 21.8155 109.822 22.973 112.724C24.1305 115.625 24.6395 118.744 24.7493 119.941"
         stroke="black"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
       <path
         d="M34.1938 114.421C34.4068 114.597 34.722 114.566 34.8976 114.353C35.0733 114.14 35.043 113.825 34.83 113.649L34.1938 114.421ZM23.592 114.991C25.0234 114.724 27.3701 114.293 29.5473 114.087C30.6371 113.984 31.6671 113.939 32.5099 113.995C32.9311 114.022 33.293 114.074 33.5858 114.151C33.8834 114.23 34.0784 114.326 34.1938 114.421L34.83 113.649C34.5596 113.426 34.2106 113.282 33.8403 113.184C33.4653 113.086 33.0354 113.027 32.5754 112.997C31.6559 112.936 30.5658 112.987 29.4531 113.092C27.2254 113.303 24.8377 113.741 23.408 114.009L23.592 114.991Z"
@@ -58,9 +58,9 @@ const PushPin = () => {
           width="25.8208"
           height="27.8425"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -109,9 +109,9 @@ const PushPin = () => {
           width="79.2788"
           height="75.9153"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -160,9 +160,9 @@ const PushPin = () => {
           width="69.2451"
           height="74.7654"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -211,9 +211,9 @@ const PushPin = () => {
           width="57.2773"
           height="51.2668"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
