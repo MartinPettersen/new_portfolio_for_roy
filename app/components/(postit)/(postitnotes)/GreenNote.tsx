@@ -2,14 +2,18 @@ import React from "react";
 
 type Props = {
   label: string;
+  index: number;
 };
 
-const GreenNote = ({ label }: Props) => {
+const GreenNote = ({ label, index }: Props) => {
   return (
     <div className="w-[463px] h-[446px] flex items-center justify-center">
-      <div className="relative z-20 font-permanent-marker">{label}</div>
+      
       <svg
-        className="fixed z-10"
+        className="fixed"
+        style={{
+          zIndex: (index)
+        }}
         width="463"
         height="446"
         viewBox="0 0 463 446"
@@ -25,6 +29,9 @@ const GreenNote = ({ label }: Props) => {
           d="M0.44575 0C0.44575 160.5 14.9458 360 38.4458 445.5L462.446 411C439.946 320.5 439.946 139.2 437.946 0H0.44575Z"
           fill="#6A894B"
         />
+        <foreignObject x="50" y="150" width="363" height="146">
+          <div className="text-center  font-permanent-marker">{label}</div>
+        </foreignObject>
       </svg>
     </div>
   );

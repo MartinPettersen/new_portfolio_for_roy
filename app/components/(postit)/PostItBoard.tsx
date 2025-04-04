@@ -36,10 +36,9 @@ const PostItBoard = ({ toggled }: Props) => {
     return (
       <div
         onClick={() => addPostIt()}
-        className="bg-pink-400/25 w-screen h-screen z-[9999] fixed top-0 left-0"
+        className=" w-screen h-screen z-[9999] fixed top-0 left-0"
       >
-        {cursorPosition.x}
-        {cursorPosition.y}
+
         {postIts.length > 0 ? (
           postIts.map((postIt, i) => 
           <div key={i} className={` absolute `}
@@ -47,7 +46,7 @@ const PostItBoard = ({ toggled }: Props) => {
             left: `${postIt.x}px`,
             top: `${postIt.y}px`,
           }}>
-            <PostOrganizer />
+            <PostOrganizer index={postIts.length}/>
           </div>)
         ) : (
           <></>

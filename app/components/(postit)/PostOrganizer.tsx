@@ -4,9 +4,11 @@ import OrangeNote from "./(postitnotes)/OrangeNote";
 import PurpleNote from "./(postitnotes)/PurpleNote";
 import GreenNote from "./(postitnotes)/GreenNote";
 
+type Props = {
+    index: number
+}
 
-
-const PostOrganizer = () => {
+const PostOrganizer = ({index}: Props) => {
 
         const quotes = ["This is a quote", "this is a different quote", "wohoooo", "Auch"];
     
@@ -20,9 +22,9 @@ const PostOrganizer = () => {
 
   return (
     <>
-      {randomNumber === 1 ? <OrangeNote label={label} /> : <></>}
-      {randomNumber === 2 ? <PurpleNote label={label} /> : <></>}
-      {randomNumber === 3 ? <GreenNote label={label} /> : <></>}
+      {randomNumber === 1 ? <OrangeNote label={label} index={index} /> : <></>}
+      {randomNumber === 2 ? <PurpleNote label={label} index={index}/> : <></>}
+      {randomNumber === 3 ? <GreenNote label={label} index={index}/> : <></>}
     </>
   );
 };
