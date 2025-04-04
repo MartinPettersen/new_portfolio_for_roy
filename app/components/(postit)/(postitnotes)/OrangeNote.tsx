@@ -7,15 +7,15 @@ type Props = {
 
 const OrangeNote = ({ label, index }: Props) => {
   return (
-    <div className="w-[463px] h-[446px] relative flex items-center justify-center">
+    <div className="w-[167px] h-[161px] relative flex items-center justify-center">
       <svg
         className="absolute"
         style={{
           zIndex: index,
         }}
-        width="463"
-        height="446"
-        viewBox="0 0 463 446"
+        width="167"
+        height="161"
+        viewBox="0 0 167 161"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -29,7 +29,7 @@ const OrangeNote = ({ label, index }: Props) => {
           fill="#FFAA75"
         />
 
-        <foreignObject x="50" y="150" width="363" height="146">
+        <foreignObject x="0" y="60" width="167" height="161">
           <div className="text-center  font-permanent-marker">{label}</div>
         </foreignObject>
       </svg>

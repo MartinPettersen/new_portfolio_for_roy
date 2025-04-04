@@ -2,17 +2,16 @@ import React from "react";
 
 type Props = {
   label: string;
-  index: number
+  index: number;
 };
 
-const PurpleNote = ({ label, index }: Props) => {
+const PinkNote = ({ label, index }: Props) => {
   return (
-    <div className="w-[167px] h-[161px] flex items-center justify-center">
-      
+    <div className="w-[167px] h-[161px] relative flex items-center justify-center">
       <svg
-        className="fixed "
+        className="absolute"
         style={{
-          zIndex: index
+          zIndex: index,
         }}
         width="167"
         height="161"
@@ -21,13 +20,13 @@ const PurpleNote = ({ label, index }: Props) => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M0.44575 0C0.44575 160.5 -4.55526 347.5 18.9447 433L437.946 405C415.446 314.5 439.946 139.2 437.946 0H0.44575Z"
+          d="M0.160971 0C0.160971 58.0034 -1.64501 125.584 6.84139 156.483L158.152 146.364C150.027 113.658 158.875 50.3057 158.152 0H0.160971Z"
           fill="#2F2F2F"
           fillOpacity="0.16"
         />
         <path
-          d="M0.44575 0C0.44575 160.5 14.9458 360 38.4458 445.5L462.446 411C439.946 320.5 439.946 139.2 437.946 0H0.44575Z"
-          fill="#5A4B89"
+          d="M0.160971 0C0.160971 58.0034 5.39729 130.101 13.8837 161L167 148.532C158.875 115.826 158.875 50.3057 158.152 0H0.160971Z"
+          fill="#F05D7E"
         />
         <foreignObject x="0" y="60" width="167" height="161">
           <div className="text-center  font-permanent-marker">{label}</div>
@@ -37,4 +36,4 @@ const PurpleNote = ({ label, index }: Props) => {
   );
 };
 
-export default PurpleNote;
+export default PinkNote;

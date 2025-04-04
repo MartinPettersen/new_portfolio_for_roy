@@ -7,16 +7,16 @@ type Props = {
 
 const GreenNote = ({ label, index }: Props) => {
   return (
-    <div className="w-[463px] h-[446px] flex items-center justify-center">
+    <div className="w-[167px] h-[161px] flex items-center justify-center">
       
       <svg
         className="fixed"
         style={{
           zIndex: (index)
         }}
-        width="463"
-        height="446"
-        viewBox="0 0 463 446"
+        width="167"
+        height="161"
+        viewBox="0 0 167 161"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -29,7 +29,7 @@ const GreenNote = ({ label, index }: Props) => {
           d="M0.44575 0C0.44575 160.5 14.9458 360 38.4458 445.5L462.446 411C439.946 320.5 439.946 139.2 437.946 0H0.44575Z"
           fill="#6A894B"
         />
-        <foreignObject x="50" y="150" width="363" height="146">
+        <foreignObject x="0" y="60" width="167" height="161">
           <div className="text-center  font-permanent-marker">{label}</div>
         </foreignObject>
       </svg>
