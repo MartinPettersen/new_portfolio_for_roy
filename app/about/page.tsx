@@ -7,6 +7,7 @@ import { PortableText, PortableTextBlock } from "@portabletext/react";
 import ImageContainer from "../components/(about)/ImageContainer";
 import AboutButtonField from "../components/(about)/AboutButtonField";
 import CertifiedHuman from "../components/(about)/CertifiedHuman";
+import AboutLeftSection from "../components/(about)/AboutLeftSection";
 
 const page = async () => {
   const aboutData = await getAbout();
@@ -34,7 +35,7 @@ const page = async () => {
           <AboutButtonField aboutData={aboutData} />
           <CertifiedHuman />
         </div>
-
+          <AboutLeftSection />
         <div className="w-[50%] flex flex-col items-start p-8 h-full justify-center m-4">
           <h3 className="font-bold flex w-full items-center justify-center text-3xl p-b8 font-libre-baskerville">
             {aboutData.fullName}
