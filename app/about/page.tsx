@@ -20,15 +20,19 @@ const page = async () => {
 
   return (
     <div className="flex flex-col rounded-t-2xl rounded-br-2xl rounded-bl-2xl shadow-custom z-[12] relative bg-[#E8D5B0] items-center justify-center">
-      <div className="w-full h-screen p-4  flex items-center justify-evenly">
-        {aboutData.portrait ? (
-          <ImageContainer
-            portrait={aboutData.portrait}
-            fullName={aboutData.fullName}
-          />
-        ) : (
-          <></>
-        )}
+      <div className="w-full p-4  flex items-center justify-evenly">
+        <div className="w-[50%] flex flex-col items-center justify-center">
+          {aboutData.portrait ? (
+            <ImageContainer
+              portrait={aboutData.portrait}
+              fullName={aboutData.fullName}
+            />
+          ) : (
+            <></>
+          )}
+          <AboutButtonField aboutData={aboutData} />
+        </div>
+
         <div className="w-[50%] flex flex-col items-start p-8 h-full justify-center m-4">
           <h3 className="font-bold flex w-full items-center justify-center text-3xl p-b8 font-libre-baskerville">
             {aboutData.fullName}
@@ -41,8 +45,6 @@ const page = async () => {
           </div>
         </div>
       </div>
-
-      <AboutButtonField aboutData={aboutData}/>
 
       <h2 className="font-bold">Hobby og andre verk</h2>
       <div>
