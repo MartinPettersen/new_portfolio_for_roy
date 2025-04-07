@@ -79,12 +79,15 @@ export async function getAbout() {
     return data[0] || null;
 }
 
-export async function getQuote() {
+export async function getSiteData() {
   const data = await createClient(clientConfig).fetch(
-      groq`*[_type == "about"]{
+      groq`*[_type == "siteData"]{
       _id,
       _createdAt,
-      quote,
+      quotes,
+      closinghobbyquote,
+      openinghobbyquote,
+      bannerquote
       }`
   )
   return data[0] || null;
