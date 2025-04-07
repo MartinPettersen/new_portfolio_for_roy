@@ -81,7 +81,7 @@ export async function getAbout() {
 
 export async function getSiteData() {
   const data = await createClient(clientConfig).fetch(
-      groq`*[_type == "siteData"]{
+      groq`*[_type == "sitedata"]{
       _id,
       _createdAt,
       quotes,

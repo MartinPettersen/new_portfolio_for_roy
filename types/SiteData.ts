@@ -3,6 +3,6 @@ export type SiteData = {
     _createdAt: Date;
     openinghobbyquote: string;
     closinghobbyquote: string;
-    bannerquotes: string;
+    bannerquote: string;
     quotes: string[];
 }

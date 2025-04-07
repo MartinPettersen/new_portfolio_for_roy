@@ -1,22 +1,18 @@
-import { About } from '@/types/About'
 import React from 'react'
 import PostItCombo from '../(postit)/PostItCombo'
+import { SiteData } from '@/types/SiteData'
 
 type Props = {
-    aboutData: About    
+    siteData: SiteData   
 }
 
-const HeaderBanner = ({aboutData}: Props) => {
+const HeaderBanner = ({siteData}: Props) => {
 
   return (
     <div className='hidden md:flex  px-6 items-center justify-evenly flex-row'>
-        <h3 className='w-[50%] text-3xl font-space-mono'>{aboutData.quote}</h3>
-        {aboutData.portrait ? (
-          <PostItCombo />
-          
-        ) : (
-          <></>
-        )}
+        <h3 className='w-[50%] text-3xl font-space-mono'>{siteData.bannerquote}</h3>
+        <PostItCombo />
+        
     </div>
   )
 }
