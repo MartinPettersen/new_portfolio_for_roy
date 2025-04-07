@@ -49,7 +49,12 @@ export const metadata: Metadata = {
   title: "Hagalid's Portfolio",
   description: "Hagalid's Portfolio side",
   icons: {
-    icon: "/logo.svg"
+    icon: [
+      {
+        url: '/logo.svg',
+        href: '/logo.svg',
+      }
+    ]
   }
 };
 
