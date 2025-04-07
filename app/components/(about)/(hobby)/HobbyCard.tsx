@@ -28,7 +28,6 @@ const HobbyCard = ({ hobby }: Props) => {
           height={315}
         />
       ) : null}
-      {randomNumber}
     </div>
   );
 };
