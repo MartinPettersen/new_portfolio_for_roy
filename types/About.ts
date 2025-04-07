@@ -11,5 +11,5 @@ export type About = {
     linkedin: string;
     cv: File;
     about: PortableTextBlock[];
-    hobby: Hobby;
+    hobby: Hobby[];
 }

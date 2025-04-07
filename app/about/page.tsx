@@ -1,10 +1,8 @@
 import React from "react";
-import { Image } from "next-sanity/image";
-
 import { getAbout } from "@/sanity/sanity-utils";
-import { Hobby } from "@/types/Hobby";
 import { PortableText, PortableTextBlock } from "@portabletext/react";
 import AboutLeftSection from "../components/(about)/AboutLeftSection";
+import AboutHobbyField from "../components/(about)/(hobby)/AboutHobbyField";
 
 const page = async () => {
   const aboutData = await getAbout();
@@ -35,34 +33,8 @@ const page = async () => {
         </div>
       </div>
 
-      <h2 className="font-bold">Hobby og andre verk</h2>
-      <div>
-        {aboutData.hobby
-          ? aboutData.hobby.map((hobby: Hobby, i: number) => (
-              <div key={i} className="w-full flex ">
-                {hobby.image ? (
-                  <Image
-                    className="w-full h-auto "
-                    src={hobby.image}
-                    alt="hobby image"
-                    width={200}
-                    height={200}
-                  />
-                ) : null}
-                <div className="flex flex-col m-4 gap-4">
-                  {hobby.description?.length && (
-                    <>
-                      {hobby.description.map(
-                        (content, i) =>
-                          content && <PortableText key={i} value={content} />
-                      )}
-                    </>
-                  )}
-                </div>
-              </div>
-            ))
-          : null}
-      </div>
+     
+      <AboutHobbyField aboutData={aboutData} />
     </div>
   );
 };
