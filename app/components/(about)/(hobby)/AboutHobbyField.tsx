@@ -1,42 +1,24 @@
 import { About } from "@/types/About";
 import React from "react";
-import { Image } from "next-sanity/image";
-import { PortableText } from "@portabletext/react";
+
 import { Hobby } from "@/types/Hobby";
+import HobbyCard from "./HobbyCard";
 
 type Props = {
   aboutData: About;
 };
 
 const AboutHobbyField = ({ aboutData }: Props) => {
+  
+
   return (
-      <div className="border-t-2 w-full ">
-        {aboutData.hobby
-          ? aboutData.hobby.map((hobby: Hobby, i: number) => (
-              <div key={i} className="w-full flex ">
-                {hobby.image ? (
-                  <Image
-                    className=" "
-                    src={hobby.image}
-                    alt="hobby image"
-                    width={200}
-                    height={200}
-                  />
-                ) : null}
-                <div className="flex flex-col m-4 gap-4">
-                  {hobby.description?.length && (
-                    <>
-                      {hobby.description.map(
-                        (content, i) =>
-                          content && <PortableText key={i} value={content} />
-                      )}
-                    </>
-                  )}
-                </div>
-              </div>
-            ))
-          : null}
-      </div>
+    <div className="border-t-2 w-full p-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 place-items-center justify-center">
+      {aboutData.hobby
+        ? aboutData.hobby.map((hobby: Hobby, i: number) => (
+            <HobbyCard hobby={hobby} key={i} />
+          ))
+        : null}
+    </div>
   );
 };
 
