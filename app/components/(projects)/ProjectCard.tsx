@@ -12,7 +12,7 @@ type Props = {
 
 const ProjectCard = ({ project }: Props) => {
   const [toggleProjectDisplay, setToggleProjectDisplay] = useState(false);
-  const { _id, title, excerpt, coverimage } = project;
+  const { _id, title, excerpt, coverimage, progress } = project;
 
   return (
     <div>
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: Props) => {
 
         <TagButton label="tag #1" url="" />
         </div>
-        <ProgressBar percentageCompleted={100} />
+        <ProgressBar stageCompleted={Number(progress)} />
       </article>
     </div>
   );

@@ -1,14 +1,21 @@
 import React from 'react'
 
 type Props = {
-    percentageCompleted: number
+    stageCompleted: number
 }
 
-const ProgressBar = ({percentageCompleted}: Props) => {
+const ProgressBar = ({stageCompleted}: Props) => {
   return (
     <div className='w-full flex flex-row h-2'>
-        <div style={{ width: `${percentageCompleted}%` }} className="bg-[#6A894B]"></div>
-        <div style={{ width: `${100 - percentageCompleted}%` }} className="bg-slate-200"></div>
+      {stageCompleted === 1 ? 
+        <div style={{ width: `${33}%` }} className="bg-[#F05D7E]"></div>
+      : null}
+      {stageCompleted === 2 ? 
+        <div style={{ width: `${66}%` }} className="bg-[#FFAA75]"></div>
+      : null}
+      {stageCompleted === 3 ? 
+        <div style={{ width: `${100}%` }} className="bg-[#6A894B]"></div>
+      : null}
     </div>
   )
 }
