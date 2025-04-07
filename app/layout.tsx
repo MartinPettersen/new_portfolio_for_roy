@@ -48,6 +48,9 @@ const permanentMarker = Permanent_Marker({
 export const metadata: Metadata = {
   title: "Hagalid's Portfolio",
   description: "Hagalid's Portfolio side",
+  icons: {
+    icon: "/logo.svg"
+  }
 };
 
 
