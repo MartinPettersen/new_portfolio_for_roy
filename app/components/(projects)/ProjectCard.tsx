@@ -12,7 +12,7 @@ type Props = {
 
 const ProjectCard = ({ project }: Props) => {
   const [toggleProjectDisplay, setToggleProjectDisplay] = useState(false);
-  const { _id, title, excerpt, coverimage, progress } = project;
+  const { _id, title, excerpt, coverimage, progress, tags } = project;
 
   return (
     <div>
@@ -29,7 +29,7 @@ const ProjectCard = ({ project }: Props) => {
       <div className="z-[-1] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px]"
       style={{
         backgroundImage: `url(${coverimage})`,
-        opacity: 0.1,
+        opacity: 0.10,
       }
     }
       ></div>
@@ -47,9 +47,11 @@ const ProjectCard = ({ project }: Props) => {
             {excerpt}
           </p>
         </div>
-        <div className="flex items-start w-full  p-0">
+        <div className="flex items-start w-full gap-2 p-0">
+        {tags.map((tag, i) => (
 
-        <TagButton label="tag #1" url="" />
+          <TagButton key={i} label={tag} url="" />
+        ))}
         </div>
         <ProgressBar stageCompleted={Number(progress)} />
       </article>
