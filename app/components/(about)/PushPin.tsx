@@ -3,6 +3,7 @@ import React from "react";
 const PushPin = () => {
   return (
     <svg
+    className="svg-shadow"
       width="126"
       height="127"
       viewBox="0 0 126 127"
