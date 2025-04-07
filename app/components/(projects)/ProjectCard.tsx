@@ -25,16 +25,20 @@ const ProjectCard = ({ project }: Props) => {
             document.body
           )
         : null}
-
+      <div className="z-[-2] bg-[#D9D9D9] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px]"></div>
+      <div className="z-[-1] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px]"
+      style={{
+        backgroundImage: `url(${coverimage})`,
+        opacity: 0.1,
+      }
+    }
+      ></div>
+      
       <article
         key={_id}
-        className="flex py-2 cursor-pointer px-1 flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
+        className="flex  py-2 cursor-pointer px-1 flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
-        style={{
-          backgroundImage: `url(${coverimage})`,
-          opacity: 0.7,
-        }
-      }
+        
       >
         
         <div className="w-[80%] flex flex-col items-center h-[80%] justify-center px-2 ">
