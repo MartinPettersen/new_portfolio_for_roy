@@ -47,7 +47,7 @@ const ProjectCard = ({ project }: Props) => {
             {excerpt}
           </p>
         </div>
-        <div className="flex items-start w-full gap-2 p-0">
+        <div className="hidden md:flex items-start w-full gap-2 p-0">
           {tags.map((tag, i) => (
             <TagButton key={i} label={tag} url="" />
           ))}
