@@ -64,11 +64,11 @@ body {
 }
 
 .svg-shadow {
-  filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.5));
 }
 
 .svg-shadow:hover {
-  filter: drop-shadow(0px 8px 0px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.5));
 }
 
 .inner-shadow {
@@ -96,7 +96,7 @@ body {
 }
 
 .shadow-nav {
-  box-shadow: 6px -6px 0px 6px rgba(0, 0, 0, 0.6) ;
+  filter: drop-shadow(6px -6px 0px rgba(0, 0, 0, 0.5)) ;
 }
 
 
