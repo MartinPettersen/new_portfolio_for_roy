@@ -7,7 +7,7 @@ type Props = {
 
 const TagButton = ({ label}: Props) => {
   return (
-    <button className="rounded-xs border-2 font-space-mono text-[#181818] border-[#181818] border-opacity-50  text-sm px-3">{label}</button>
+    <button className="rounded-[1px] bg-[#F3E9D6] border-[1px] font-space-mono text-[#181818] border-[#181818]  text-sm">{label}</button>
 
   )
 }
