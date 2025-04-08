@@ -5,6 +5,11 @@ import ProjectCard from "./ProjectCard";
 
 const ProjectField = async () => {
   const projects = await getProjects();
+
+  if (projects.length === 0) {
+    return <div>loading...</div>
+  }
+
   return (
     <div className="grid grid-cols-1 py-24 md:grid-cols-3 gap-2 md:gap-12 items-center  justify-evenly">
       {projects.map((project) => (

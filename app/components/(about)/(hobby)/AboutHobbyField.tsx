@@ -15,6 +15,10 @@ const AboutHobbyField = async ({ aboutData }: Props) => {
 
     const siteData: SiteData = await getSiteData()
 
+    if (!siteData) {
+      return <div>loading...</div>
+    }
+
   return (
     <div className="border-t-2 w-[90%] p-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12 place-items-center justify-center">
         <QuoteCard label={siteData.openinghobbyquote} />

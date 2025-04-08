@@ -12,6 +12,9 @@ type Props = {
 
 const ProjectCard = ({ project }: Props) => {
   const [toggleProjectDisplay, setToggleProjectDisplay] = useState(false);
+
+  return <div>dix later</div>
+
   const { _id, title, excerpt, coverimage, progress, tags } = project;
 
   return (
