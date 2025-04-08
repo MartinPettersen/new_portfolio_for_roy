@@ -41,9 +41,9 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen h-screen bg-[#D9D9D92B] backdrop-blur-sm absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[#E8D5B0] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[1294px] h-[716px] flex flex-col items-center justify-center">
-        <div className="flex items-center justify-evenly w-[94%] h-[80%] ">
-          <div className="w-[50%]">
+      <article className="bg-[#E8D5B0] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[393px] p-2 flex flex-col items-center justify-center">
+        <div className="flex items-center justify-evenly w-[100%] h-[80%] ">
+          <div className="hidden md:block w-[50%]">
             {project.content &&
               project.content.length > 0 &&
               project.content[projectIndex].image && (
@@ -57,11 +57,23 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
               )}
           </div>
 
-          <div className="flex items-center  h-[84%]  flex-col w-[40%] ">
+          <div className="flex items-center justify-center  md:h-[84%]  flex-col w-full md:w-[40%] ">
             <h2 className="font-bold font-rubik text-xl border-stone-600/70">
               {project.title}
             </h2>
-
+            <div className="md:hidden w-full">
+            {project.content &&
+              project.content.length > 0 &&
+              project.content[projectIndex].image && (
+                <Image
+                  className="pl-4 "
+                  src={project.content[projectIndex].image.asset}
+                  alt={project.content[projectIndex].image.alt || project.title}
+                  width={588}
+                  height={493}
+                />
+              )}
+          </div>
             {project.content?.length && (
               <div className="mt-8 w-full font-work-sans text-stone-800/90">
                 {project.content &&
