@@ -12,7 +12,7 @@ const project = {
             name: 'slug',
             title: 'Slug',
             type: 'slug',
-            description: 'A slug is required for the project to show up in the preview',
+            description: 'Bare trykk på generate knappen',
             options: {
                 source: 'title',
             },
