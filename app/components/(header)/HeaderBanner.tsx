@@ -8,6 +8,10 @@ type Props = {
 
 const HeaderBanner = ({siteData}: Props) => {
 
+  if (!siteData.bannerquote) {
+    return <div>Loading...</div>
+  }
+
   return (
     <div className='hidden md:flex  py-2 px-6 items-center justify-between flex-row'>
         <PostItCombo />
