@@ -95,12 +95,13 @@ body {
   box-shadow: 6px -6px 0px 6px rgba(0, 0, 0, 0.6) ;
 }
 
-.shadow-nav:hover {
-  box-shadow: 0px -0px 0px 0px rgba(40, 49, 60, 0.0) ;
-}
 
 .shadow-folder {
   box-shadow: 6px -6px 0px 6px rgba(0, 0, 0, 0.6) ;
+}
+
+.inner-shadow-image-card {
+  box-shadow: inset  -2px 2px 0px 2px rgba(0, 0, 0, 0.4)
 }
 
 .font-libre-baskerville {

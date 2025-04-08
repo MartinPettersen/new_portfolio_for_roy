@@ -9,7 +9,7 @@ type Props = {
 
 const ImageContainer = ({portrait, fullName}: Props) => {
   return (
-    <div className='w-[600px] flex relative items-center justify-center h-[600px] bg-[#F3E9D6]'>
+    <div className='w-[600px] flex relative items-center justify-center h-[600px] bg-[#F3E9D6] inner-shadow-image-card'>
         <div className='top-[-20] left-[65%] z-[20] absolute'>
           <PushPin />
         </div>

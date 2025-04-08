@@ -11,13 +11,13 @@ const HobbyCard = ({ hobby }: Props) => {
   const [randomNumber, setRandomNumber] = useState(-100);
 
   useEffect(() => {
-    let num = Math.floor(Math.random() * 7) + 1;
+    let num = Math.floor(Math.random() * 2) + 1;
     num *= Math.round(Math.random()) ? 1 : -1
     setRandomNumber(num);
   }, []);
 
   return (
-    <div className="flex w-[384px]  h-[388px] bg-[#F3E9D6] items-center justify-center">
+    <div className="flex w-[384px]  h-[388px] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
       {hobby.image && (randomNumber > -100) ? (
         <Image
           className={`svg-shadow`}
