@@ -36,7 +36,7 @@ const ProjectCard = ({ project }: Props) => {
       
       <article
         key={_id}
-        className="flex  py-2 cursor-pointer px-1 flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 shadow-custom bg-fixed bg-center bg-no-repeat bg-cover"
+        className="flex  py-2 cursor-pointer px-1 flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 inner-shadow-image-card bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
         
       >
