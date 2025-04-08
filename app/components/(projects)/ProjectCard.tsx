@@ -41,18 +41,20 @@ const ProjectCard = ({ project }: Props) => {
         className="flex  py-2 cursor-pointer px-1 flex-col items-center w-[356px] h-[220px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 inner-shadow-image-card bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
       >
-        <div className="w-[80%] flex flex-col items-center h-[80%] justify-center px-2 ">
-          <h3 className=" text-3xl font-semibold">{title}</h3>
-          <p className="line-clamp-3 text-sm leading-6 text-gray-600">
+        <div className="w-[100%] flex flex-col items-center h-[80%] justify-center px-2 ">
+          <h3 className=" text-[40px] font-semibold font-libre-baskerville">{title}</h3>
+          <p className="line-clamp-3 text-[22px] leading-6 text-[#181818] font-rubik">
             {excerpt}
           </p>
         </div>
-        <div className="hidden md:flex items-start w-full gap-2 p-0">
-          {tags.map((tag, i) => (
-            <TagButton key={i} label={tag} url="" />
-          ))}
+        <div className="w-full flex flex-col h-[20%] gap-2">
+          <div className="hidden md:flex items-start w-full gap-2 p-0">
+            {tags.map((tag, i) => (
+              <TagButton key={i} label={tag} url="" />
+            ))}
+          </div>
+          <ProgressBar stageCompleted={Number(progress)} />
         </div>
-        <ProgressBar stageCompleted={Number(progress)} />
       </article>
     </div>
   );
