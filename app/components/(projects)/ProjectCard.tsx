@@ -25,7 +25,7 @@ const ProjectCard = ({ project }: Props) => {
             document.body
           )
         : null}
-      <div className="z-[-2] bg-[#D9D9D9] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px]"></div>
+      <div className="z-[-2] bg-[#F3E9D6] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px]"></div>
       <div className="z-[-1] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px]"
       style={{
         backgroundImage: `url(${coverimage})`,
