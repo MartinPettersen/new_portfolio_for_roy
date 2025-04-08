@@ -83,6 +83,14 @@ body {
   box-shadow: inset  4px 4px 0px 4px rgba(0, 0, 0, 0.5)
 }
 
+.postit-shadow {
+  filter: drop-shadow(4px 0px 0px rgba(0, 0, 0, 0.5));
+}
+
+.postit-shadow:hover {
+  filter: drop-shadow(8px 0px 0px rgba(0, 0, 0, 0.5));
+}
+
 .font-libre-baskerville {
   font-family: var(--font-libre-baskerville);
 }
