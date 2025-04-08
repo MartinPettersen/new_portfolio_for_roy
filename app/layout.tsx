@@ -69,7 +69,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${rubik.variable} ${workSans.variable} ${spaceMono.variable} ${permanentMarker.variable} antialiased md:p-6 pt-8 md:pt-0 relative `}
       >
-        <div className="z-[1] max-w-full ">
+        <div className="z-[1] min-w-full ">
           <Header />
           <Navbar />
           <Papers />
