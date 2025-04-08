@@ -14,11 +14,11 @@ const ImageContainer = ({portrait, fullName}: Props) => {
           <PushPin />
         </div>
         <Image
-            className="w-[548px] h-[521px] z-[10] absolute rotate-3 svg-shadow"
+            className="w-[568px] h-[540px] z-[10] absolute rotate-3 svg-shadow"
             src={portrait}
             alt={fullName || "Portrait Image"}
-            width={2000}
-            height={1000}
+            width={568}
+            height={540}
           />
     </div>
   )

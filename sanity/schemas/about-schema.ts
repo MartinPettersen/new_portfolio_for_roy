@@ -16,6 +16,7 @@ const about = {
         {
             name: "portrait",
             title: "Porttrait",
+            description: "piksler 500x500",
             type: "image",
             options: {
                 hotspot: true
