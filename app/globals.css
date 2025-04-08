@@ -76,11 +76,11 @@ body {
 }
 
 .inner-shadow-button {
-  box-shadow: inset  2px 2px 0px 2px rgba(0, 0, 0, 0.5)
+  box-shadow: inset  -1px 1px 0px 1px rgba(0, 0, 0, 0.5)
 }
 
 .inner-shadow-button:hover {
-  box-shadow: inset  4px 4px 0px 4px rgba(0, 0, 0, 0.5)
+  box-shadow: inset  -2px 2px 0px 2px rgba(0, 0, 0, 0.5)
 }
 
 .postit-shadow {
