@@ -9,11 +9,6 @@ const about = {
             type: 'string',
         },
         {
-            name: 'quote',
-            title: 'Quote',
-            type: 'text',
-        },
-        {
             name: "portrait",
             title: "Porttrait",
             description: "piksler 500x500",

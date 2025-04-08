@@ -14,16 +14,7 @@ const siteData = {
             title: 'BannerQuote',
             type: 'text',
         },
-        {
-            name: 'openinghobbyquote',
-            title: 'OpeningHobbyQuote',
-            type: 'text',
-        },
-        {
-            name: 'closinghobbyquote',
-            title: 'ClosingHobbyQuote',
-            type: 'text',
-        },
+        
     ]
 };
 

@@ -62,7 +62,6 @@ export async function getAbout() {
         _id,
         _createdAt,
         fullName,
-        quote,
         "portrait": portrait.asset->url,
         tlf,
         mail,
@@ -85,8 +84,6 @@ export async function getSiteData() {
       _id,
       _createdAt,
       quotes,
-      closinghobbyquote,
-      openinghobbyquote,
       bannerquote
       }`
   )
