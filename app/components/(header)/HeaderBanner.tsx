@@ -1,6 +1,7 @@
 import React from 'react'
 import PostItCombo from '../(postit)/PostItCombo'
 import { SiteData } from '@/types/SiteData'
+import Loading from '../(loading)/Loading'
 
 type Props = {
     siteData: SiteData   
@@ -9,7 +10,7 @@ type Props = {
 const HeaderBanner = ({siteData}: Props) => {
 
   if (!siteData.bannerquote) {
-    return <div>Loading...</div>
+    return <Loading />
   }
 
   return (

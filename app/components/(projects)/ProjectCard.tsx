@@ -13,7 +13,7 @@ type Props = {
 const ProjectCard = ({ project }: Props) => {
   const [toggleProjectDisplay, setToggleProjectDisplay] = useState(false);
 
-  return <div>dix later</div>
+ 
 
   const { _id, title, excerpt, coverimage, progress, tags } = project;
 
@@ -52,7 +52,7 @@ const ProjectCard = ({ project }: Props) => {
         </div>
         <div className="w-full hidden md:flex flex-col h-[20%] gap-2">
           <div className="hidden md:flex items-start w-full gap-2 p-0">
-            {tags.map((tag, i) => (
+            {tags && tags.map((tag, i) => (
               <TagButton key={i} label={tag} url="" />
             ))}
           </div>

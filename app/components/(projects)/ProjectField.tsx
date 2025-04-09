@@ -1,13 +1,14 @@
 import React from "react";
 import { getProjects } from "@/sanity/sanity-utils";
 import ProjectCard from "./ProjectCard";
+import Loading from "../(loading)/Loading";
 
 
 const ProjectField = async () => {
   const projects = await getProjects();
 
   if (projects.length === 0) {
-    return <div>loading...</div>
+    return <Loading />
   }
 
   return (

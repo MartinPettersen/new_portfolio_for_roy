@@ -6,6 +6,7 @@ import HobbyCard from "./HobbyCard";
 import { getSiteData } from "@/sanity/sanity-utils";
 import QuoteCard from "./QuoteCard";
 import { SiteData } from "@/types/SiteData";
+import Loading from "../../(loading)/Loading";
 
 type Props = {
   aboutData: About;
@@ -16,7 +17,7 @@ const AboutHobbyField = async ({ aboutData }: Props) => {
     const siteData: SiteData = await getSiteData()
 
     if (!siteData) {
-      return <div>loading...</div>
+      return <Loading />
     }
 
   return (
