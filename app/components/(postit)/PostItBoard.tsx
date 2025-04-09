@@ -1,13 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import PostOrganizer from "./PostOrganizer";
+import TrashBucket from "./TrashBucket";
 
 type Props = {
   toggled: boolean;
   togglePostIt: () => void;
 };
 
-const PostItBoard = ({ toggled }: Props) => {
+const PostItBoard = ({ toggled, togglePostIt }: Props) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
   const [postIts, setPostIts] = useState<{ x: number; y: number }[]>([])
@@ -32,13 +33,20 @@ const PostItBoard = ({ toggled }: Props) => {
     console.log("postIts",postIts)
   };
 
+  const deletePostIts = () => {
+    setPostIts([])
+    togglePostIt()
+  }
+
   if (toggled) {
     return (
       <div
         onClick={() => addPostIt()}
         className=" w-screen h-screen z-[9999] fixed top-0 left-0"
       >
-
+        <div className="z-[9999]">
+        <TrashBucket deletePostIts={deletePostIts}/>
+        </div>
         {postIts.length > 0 ? (
           postIts.map((postIt, i) => 
           <div key={i} className={` absolute `}
