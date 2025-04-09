@@ -15,6 +15,7 @@ export async function getProjects(): Promise<Project[]> {
         content[]{
           _type == 'contentBlock' => {
             content,
+            slidetitle,
             image{
               "asset": asset->url, // Fetch the URL here
               alt

@@ -35,6 +35,8 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
     setProjectIndex(index);
   };
 
+  console.log(project.content[projectIndex])
+
   return (
     <div className="fixed inset-0 z-[10000] flex flex-col w-screen h-screen items-center justify-center">
       <div
@@ -59,8 +61,8 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
 
           <div className="flex items-center justify-center  md:h-[84%]  flex-col w-full md:w-[40%] ">
             <h2 className="font-bold font-rubik text-xl border-stone-600/70">
-              {project.content[projectIndex].slidetitle && 
-                project.content[projectIndex].slidetitle
+              {project.content[projectIndex].slidetitle? 
+                project.content[projectIndex].slidetitle : null
               }
             </h2>
             <div className="md:hidden w-full">

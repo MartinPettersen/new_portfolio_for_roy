@@ -6,7 +6,7 @@ type Props = {
 
 const ProgressBar = ({stageCompleted}: Props) => {
   return (
-    <div className='w-full pb-4 hidden md:flex flex-row  '>
+    <div className='w-full pb-4 hidden sm:flex flex-row  '>
       {stageCompleted === 1 ? 
         <svg width={"10%"} height="20" viewBox="0 0 92 20" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.660645 19.9286V0H91.1696L84.5267 3.32143L87.0178 10.7946L82.866 13.2857L87.0178 19.9286H0.660645Z" fill="#F05D7E"/>
