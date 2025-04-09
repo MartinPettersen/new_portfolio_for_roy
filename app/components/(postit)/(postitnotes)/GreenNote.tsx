@@ -1,4 +1,5 @@
 import React from "react";
+import PostItLabel from "./PostItLabel";
 
 type Props = {
   label: string;
@@ -29,8 +30,8 @@ const GreenNote = ({ label, index }: Props) => {
           d="M0.44575 0C0.44575 160.5 14.9458 360 38.4458 445.5L462.446 411C439.946 320.5 439.946 139.2 437.946 0H0.44575Z"
           fill="#6A894B"
         />
-        <foreignObject x="0" y="60" width="167" height="161">
-          <div className="text-center  font-permanent-marker">{label}</div>
+        <foreignObject x="0" y="0" width="160" height="161" >
+          <PostItLabel label={label}/>
         </foreignObject>
       </svg>
     </div>
