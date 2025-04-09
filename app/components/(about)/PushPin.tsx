@@ -3,61 +3,72 @@ import React from "react";
 const PushPin = () => {
   return (
     <svg
-    className="svg-shadow"
+      className="svg-shadow"
       width="126"
-      height="127"
-      viewBox="0 0 126 127"
+      height="137"
+      viewBox="0 0 126 137"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g filter="url(#filter0_di_176_230)">
-        <path
-          d="M22.0001 111C20.5 109 24.3104 100.578 32.4708 86.5001L46.5002 95.9553C46.5002 95.9553 33.5619 107.701 26.5 113C22.28 116.167 23.5002 113 22.0001 111Z"
-          fill="#D9D9D9"
-        />
-      </g>
-      <g filter="url(#filter1_di_176_230)">
+      <g filter="url(#filter0_d_208_4976)">
+        <g filter="url(#filter1_i_208_4976)">
+          <path
+            d="M21.9999 111C20.4999 109 24.3102 100.578 32.4706 86.5001L46.5001 95.9553C46.5001 95.9553 33.5618 107.701 26.4998 113C22.2798 116.167 23.5 113 21.9999 111Z"
+            fill="#D9D9D9"
+          />
+        </g>
         <ellipse
-          cx="52.4086"
-          cy="76.0492"
-          rx="40.7536"
-          ry="35.1912"
-          transform="rotate(27.547 52.4086 76.0492)"
-          fill="#F05D7E"
+          cx="56.0777"
+          cy="91.2408"
+          rx="39.4678"
+          ry="30.5209"
+          transform="rotate(27.3474 56.0777 91.2408)"
+          fill="#181818"
+          fillOpacity="0.25"
         />
-      </g>
-      <g filter="url(#filter2_di_176_230)">
+        <g filter="url(#filter2_i_208_4976)">
+          <ellipse
+            cx="52.4085"
+            cy="76.0492"
+            rx="40.7536"
+            ry="35.1912"
+            transform="rotate(27.547 52.4085 76.0492)"
+            fill="#F05D7E"
+          />
+        </g>
+        <g filter="url(#filter3_i_208_4976)">
+          <path
+            d="M32.7129 52.971C26.745 57 27.7717 75.4304 37.2448 85.5C47.2447 96.1296 68.7448 101.5 76.9468 91.3626L84.7447 67L98.245 42.3021L74.9973 25L53.8551 40.5L32.7129 52.971Z"
+            fill="#F05D7E"
+          />
+        </g>
+        <g filter="url(#filter4_i_208_4976)">
+          <ellipse
+            cx="88.3467"
+            cy="34.7876"
+            rx="30.3814"
+            ry="21.7984"
+            transform="rotate(32.8282 88.3467 34.7876)"
+            fill="#F05D7E"
+          />
+        </g>
         <path
-          d="M32.7131 52.971C26.7451 57 27.7719 75.4304 37.245 85.5C47.2449 96.1296 68.745 101.5 76.9469 91.3626L84.7449 67L98.2452 42.3021L74.9975 25L53.8553 40.5L32.7131 52.971Z"
-          fill="#F05D7E"
+          d="M15.8109 106C17.7159 107.032 21.8153 109.822 22.9728 112.724C24.1303 115.625 24.6393 118.744 24.7491 119.941"
+          stroke="black"
+          strokeLinecap="round"
+        />
+        <path
+          d="M34.1936 114.421C34.4066 114.597 34.7218 114.566 34.8975 114.353C35.0731 114.14 35.0429 113.825 34.8298 113.649L34.1936 114.421ZM23.5918 114.991C25.0232 114.724 27.3699 114.293 29.5471 114.087C30.6369 113.984 31.6669 113.939 32.5097 113.995C32.9309 114.022 33.2928 114.074 33.5856 114.151C33.8832 114.23 34.0782 114.326 34.1936 114.421L34.8298 113.649C34.5594 113.426 34.2104 113.282 33.8401 113.184C33.4651 113.086 33.0352 113.027 32.5752 112.997C31.6557 112.936 30.5656 112.987 29.4529 113.092C27.2252 113.303 24.8375 113.741 23.4078 114.009L23.5918 114.991Z"
+          fill="black"
         />
       </g>
-      <g filter="url(#filter3_di_176_230)">
-        <ellipse
-          cx="88.3469"
-          cy="34.7876"
-          rx="30.3814"
-          ry="21.7984"
-          transform="rotate(32.8282 88.3469 34.7876)"
-          fill="#F05D7E"
-        />
-      </g>
-      <path
-        d="M15.811 106C17.7161 107.032 21.8155 109.822 22.973 112.724C24.1305 115.625 24.6395 118.744 24.7493 119.941"
-        stroke="black"
-        strokeLinecap="round"
-      />
-      <path
-        d="M34.1938 114.421C34.4068 114.597 34.722 114.566 34.8976 114.353C35.0733 114.14 35.043 113.825 34.83 113.649L34.1938 114.421ZM23.592 114.991C25.0234 114.724 27.3701 114.293 29.5473 114.087C30.6371 113.984 31.6671 113.939 32.5099 113.995C32.9311 114.022 33.293 114.074 33.5858 114.151C33.8834 114.23 34.0784 114.326 34.1938 114.421L34.83 113.649C34.5596 113.426 34.2106 113.282 33.8403 113.184C33.4653 113.086 33.0354 113.027 32.5754 112.997C31.6559 112.936 30.5658 112.987 29.4531 113.092C27.2254 113.303 24.8377 113.741 23.408 114.009L23.592 114.991Z"
-        fill="black"
-      />
       <defs>
         <filter
-          id="filter0_di_176_230"
-          x="21.6797"
-          y="86.5002"
-          width="25.8208"
-          height="27.8425"
+          id="filter0_d_208_4976"
+          x="12.7692"
+          y="10.1542"
+          width="103.716"
+          height="113.704"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
@@ -68,21 +79,38 @@ const PushPin = () => {
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
             result="hardAlpha"
           />
-          <feOffset dx="1" />
+          <feOffset />
           <feComposite in2="hardAlpha" operator="out" />
           <feColorMatrix
             type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
           />
           <feBlend
             mode="normal"
             in2="BackgroundImageFix"
-            result="effect1_dropShadow_176_230"
+            result="effect1_dropShadow_208_4976"
           />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_176_230"
+            in2="effect1_dropShadow_208_4976"
+            result="shape"
+          />
+        </filter>
+        <filter
+          id="filter1_i_208_4976"
+          x="21.6794"
+          y="86.5001"
+          width="24.8207"
+          height="27.8427"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
             result="shape"
           />
           <feColorMatrix
@@ -100,40 +128,23 @@ const PushPin = () => {
           <feBlend
             mode="normal"
             in2="shape"
-            result="effect2_innerShadow_176_230"
+            result="effect1_innerShadow_208_4976"
           />
         </filter>
         <filter
-          id="filter1_di_176_230"
-          x="12.769"
-          y="39.5916"
-          width="79.2788"
-          height="75.9153"
+          id="filter2_i_208_4976"
+          x="12.7692"
+          y="39.5914"
+          width="79.2786"
+          height="72.9155"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="3" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_176_230"
-          />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_176_230"
+            in2="BackgroundImageFix"
             result="shape"
           />
           <feColorMatrix
@@ -151,40 +162,23 @@ const PushPin = () => {
           <feBlend
             mode="normal"
             in2="shape"
-            result="effect2_innerShadow_176_230"
+            result="effect1_innerShadow_208_4976"
           />
         </filter>
         <filter
-          id="filter2_di_176_230"
-          x="29"
+          id="filter3_i_208_4976"
+          x="28.9998"
           y="25"
-          width="69.2451"
-          height="74.7654"
+          width="69.2453"
+          height="71.7654"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="3" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_176_230"
-          />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_176_230"
+            in2="BackgroundImageFix"
             result="shape"
           />
           <feColorMatrix
@@ -202,40 +196,23 @@ const PushPin = () => {
           <feBlend
             mode="normal"
             in2="shape"
-            result="effect2_innerShadow_176_230"
+            result="effect1_innerShadow_208_4976"
           />
         </filter>
         <filter
-          id="filter3_di_176_230"
-          x="59.208"
-          y="10.1543"
-          width="57.2773"
-          height="51.2668"
+          id="filter4_i_208_4976"
+          x="60.208"
+          y="10.1542"
+          width="56.2774"
+          height="49.2668"
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dx="-1" dy="2" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_176_230"
-          />
           <feBlend
             mode="normal"
             in="SourceGraphic"
-            in2="effect1_dropShadow_176_230"
+            in2="BackgroundImageFix"
             result="shape"
           />
           <feColorMatrix
@@ -253,7 +230,7 @@ const PushPin = () => {
           <feBlend
             mode="normal"
             in2="shape"
-            result="effect2_innerShadow_176_230"
+            result="effect1_innerShadow_208_4976"
           />
         </filter>
       </defs>
