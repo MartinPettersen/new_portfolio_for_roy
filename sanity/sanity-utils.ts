@@ -85,7 +85,11 @@ export async function getSiteData() {
       _createdAt,
       quotes,
       bannerquote
-      }`
+      }`,
+      {},
+      {
+        cache: 'no-store'
+      }
   )
   return data[0] || null;
 }
