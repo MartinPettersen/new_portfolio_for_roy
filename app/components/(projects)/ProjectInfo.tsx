@@ -45,7 +45,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen h-screen bg-[#D9D9D92B] backdrop-blur-sm absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[#E8D5B0] min-h-[400px] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[393px] p-2 flex flex-col items-center justify-center">
+      <article className="bg-[#E8D5B0] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[393px] md:w-[1294px] p-2 flex flex-col items-center justify-center">
         <div className="flex items-center justify-evenly w-[100%] h-[80%] ">
           <div className="hidden md:block w-[50%]">
             {project.content &&
