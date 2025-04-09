@@ -9,7 +9,7 @@ type Props = {
 const QuoteCard = ({ hobby }: Props) => {
   return (
     <div className="flex w-[384px] text-5xl font-permanent-marker h-[388px] items-center justify-center">
-      {hobby.description!.map(
+      {hobby.description && hobby.description.map(
         (content, i: number) =>
           content && <PortableText key={i} value={content} />
       )}
