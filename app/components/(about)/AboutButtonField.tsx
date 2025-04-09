@@ -2,6 +2,7 @@ import React from "react";
 import ClipBoardButton from "./ClipBoardButton";
 import DownloadButton from "./DownloadButton";
 import { About } from "@/types/About";
+import LinkButton from "./LinkButton";
 
 type Props = {
   aboutData: About;
@@ -19,8 +20,9 @@ const AboutButtonField = ({ aboutData }: Props) => {
           <ClipBoardButton text={aboutData.mail} label={"mail"} />
         ) : null}
 
+       
         {aboutData.linkedin ? (
-          <ClipBoardButton text={aboutData.linkedin} label={"linkedin"} />
+          <LinkButton url={aboutData.linkedin} label={"linkedin"} />
         ) : null}
 
         {aboutData.cv ? (
