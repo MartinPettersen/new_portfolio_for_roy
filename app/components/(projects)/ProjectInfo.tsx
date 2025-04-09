@@ -6,6 +6,7 @@ import { PortableText } from "@portabletext/react";
 import ProjectCircle from "./(project pagination)/ProjectCircle";
 import ProjectButtonLeft from "./(project pagination)/ProjectButtonLeft";
 import ProjectButtonRight from "./(project pagination)/ProjectButtonRight";
+import Loading from "../(loading)/Loading";
 
 type Props = {
   project: Project;
@@ -14,8 +15,10 @@ type Props = {
 
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const [projectIndex, setProjectIndex] = useState(0);
+  console.log(project)
 
-  if (!project) return <p className="text-white">Laster Prosjekt...</p>;
+
+  if (!project || !project.content) return <Loading />;
 
   const goback = () => {
     if (projectIndex > 0) {
@@ -35,7 +38,6 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
     setProjectIndex(index);
   };
 
-  console.log(project.content[projectIndex])
 
   return (
     <div className="fixed inset-0 z-[10000] flex flex-col w-screen h-screen items-center justify-center">
