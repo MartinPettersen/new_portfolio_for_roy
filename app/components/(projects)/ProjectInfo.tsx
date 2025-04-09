@@ -17,23 +17,42 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
 
   if (!project || !project.content) return <Loading />;
 
+  const totalSlides = project.content.length;
+
+  const getCircleIndex = (currentIndex: number) => {
+    if (totalSlides <= 7) {
+      return currentIndex;
+    }
+
+    if (currentIndex < 6) {
+      return currentIndex;
+    } else if (currentIndex === totalSlides - 1) {
+      return 6;
+    } else {
+      return 5;
+    }
+  };
+
   const goback = () => {
     if (projectIndex > 0) {
       setProjectIndex(projectIndex - 1);
-    } else {
-      setProjectIndex(0);
     }
   };
 
   const nextProject = () => {
-    if (projectIndex < project.content.length - 1) {
-      setProjectIndex(projectIndex + 1);
-    }
+    console.log("projectIndex", projectIndex + 1);
+    console.log("project.content.length", project.content.length);
+
+   if ( projectIndex < totalSlides -1 ) { 
+    setProjectIndex(projectIndex + 1)
+   }
   };
 
   const goTothisIndex = (index: number) => {
     setProjectIndex(index);
   };
+
+  const circleIndex = getCircleIndex(projectIndex)
 
   return (
     <div className="fixed inset-0 z-[10000] flex flex-col w-screen h-screen items-center justify-center">
@@ -81,7 +100,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
           nextProject={nextProject}
           goTothisIndex={goTothisIndex}
           goback={goback}
-          projectIndex={projectIndex}
+          projectIndex={circleIndex}
         />
       </article>
     </div>
