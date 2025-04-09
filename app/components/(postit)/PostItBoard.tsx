@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from "react";
 import PostOrganizer from "./PostOrganizer";
 import TrashBucket from "./TrashBucket";
+import { SiteData } from "@/types/SiteData";
 
 type Props = {
   toggled: boolean;
   togglePostIt: () => void;
+  siteData: SiteData;
 };
 
-const PostItBoard = ({ toggled, togglePostIt }: Props) => {
+const PostItBoard = ({ toggled, togglePostIt, siteData }: Props) => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
   const [postIts, setPostIts] = useState<{ x: number; y: number }[]>([])
@@ -57,7 +59,7 @@ const PostItBoard = ({ toggled, togglePostIt }: Props) => {
             left: `${postIt.x}px`,
             top: `${postIt.y}px`,
           }}>
-            <PostOrganizer index={postIts.length}/>
+            <PostOrganizer index={postIts.length} siteData={siteData}/>
           </div>)
         ) : (
           <></>

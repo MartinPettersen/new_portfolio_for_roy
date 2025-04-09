@@ -4,26 +4,32 @@ import OrangeNote from "./(postitnotes)/OrangeNote";
 import PurpleNote from "./(postitnotes)/PurpleNote";
 import GreenNote from "./(postitnotes)/GreenNote";
 import PinkNote from "./(postitnotes)/PinkNote";
+import { SiteData } from "@/types/SiteData";
+import Loading from "../(loading)/Loading";
 
 type Props = {
   index: number;
+  siteData: SiteData
 };
 
-const PostOrganizer = ({ index }: Props) => {
-  const quotes = [
-    "This is a quote",
-    "this is a different quote",
-    "wohoooo",
-    "Auch",
-  ];
+const PostOrganizer = ({ index, siteData }: Props) => {
 
   const [randomNumber, setRandomNumber] = useState(-1);
   const [label, setLabel] = useState("");
 
+
+
   useEffect(() => {
     setRandomNumber(Math.floor(Math.random() * 4) + 1);
-    setLabel(quotes[Math.floor(Math.random() * quotes.length) + 0]);
+    console.log("sitedata", siteData)
+    if (siteData.quotes) {
+      setLabel(siteData.quotes[Math.floor(Math.random() * siteData.quotes.length) + 0]);
+    }
   }, []);
+
+  if (!siteData) {
+    return <Loading />
+  }
 
   return (
     <>

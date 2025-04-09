@@ -14,7 +14,7 @@ const HeaderBanner = ({ siteData }: Props) => {
 
   return (
     <div className="hidden md:flex  py-2 px-6 items-center justify-between flex-row">
-      <PostItCombo />
+      <PostItCombo siteData={siteData}/>
       <h3 className="w-[80%] text-3xl font-space-mono">
         {siteData.bannerquote}
       </h3>

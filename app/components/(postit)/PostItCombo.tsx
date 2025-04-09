@@ -2,8 +2,13 @@
 import React, { useState } from "react";
 import PostItButton from "./PostItButton";
 import PostItBoard from "./PostItBoard";
+import { SiteData } from "@/types/SiteData";
 
-const PostItCombo = () => {
+type Props = {
+  siteData: SiteData;
+};
+
+const PostItCombo = ({siteData}: Props) => {
   const [toggled, setToggled] = useState(false);
 
   const togglePostIt = () => {
@@ -13,7 +18,7 @@ const PostItCombo = () => {
   return (
     <>
       <PostItButton togglePostIt={togglePostIt} />
-      <PostItBoard toggled={toggled} togglePostIt={togglePostIt} />
+      <PostItBoard toggled={toggled} togglePostIt={togglePostIt} siteData={siteData} />
     </>
   );
 };
