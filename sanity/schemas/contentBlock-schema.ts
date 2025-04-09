@@ -11,6 +11,11 @@ const contentBlock = {
             of: [{ type: "block" }]
         },
         {
+            name: 'slidetitle',
+            title: 'SlideTitle',
+            type: 'string',
+        },
+        {
             name: "image",
             title: "Image",
             type: "image",

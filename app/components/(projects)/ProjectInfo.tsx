@@ -59,7 +59,9 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
 
           <div className="flex items-center justify-center  md:h-[84%]  flex-col w-full md:w-[40%] ">
             <h2 className="font-bold font-rubik text-xl border-stone-600/70">
-              {project.title}
+              {project.content[projectIndex].slidetitle && 
+                project.content[projectIndex].slidetitle
+              }
             </h2>
             <div className="md:hidden w-full">
             {project.content &&

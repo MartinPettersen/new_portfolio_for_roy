@@ -45,6 +45,7 @@ export async function getProject(slug: string): Promise<Project> {
         content[]{
           _type == 'contentBlock' => {
             content,
+            slitetitle,
             image{
               "asset": asset->url, // Fetch the URL here
               alt
