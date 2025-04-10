@@ -1,5 +1,4 @@
 import React from "react";
-import PostItLabel from "./PostItLabel";
 
 type Props = {
   label: string;
