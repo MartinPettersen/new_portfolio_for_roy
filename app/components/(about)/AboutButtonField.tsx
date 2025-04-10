@@ -1,9 +1,9 @@
 import React from "react";
-import ClipBoardButton from "./ClipBoardButton";
-import DownloadButton from "./DownloadButton";
+import ClipBoardButton from "./(buttons)/ClipBoardButton";
+import DownloadButton from "./(buttons)/DownloadButton";
 import { About } from "@/types/About";
-import LinkButton from "./LinkButton";
-import EmailButton from "./EmailButton";
+import LinkButton from "./(buttons)/LinkButton";
+import EmailButton from "./(buttons)/EmailButton";
 
 type Props = {
   aboutData: About;
