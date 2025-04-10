@@ -6,7 +6,7 @@ type Props = {
 
 const TrashBucket = ({ deletePostIts }: Props) => {
   return (
-    <svg className="trash-bucket"
+    <svg className="trash-bucket hover:cursor-pointer"
       onClick={() => deletePostIts()}
       width="116"
       height="128"
