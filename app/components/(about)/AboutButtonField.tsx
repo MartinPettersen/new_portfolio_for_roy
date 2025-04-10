@@ -3,6 +3,7 @@ import ClipBoardButton from "./ClipBoardButton";
 import DownloadButton from "./DownloadButton";
 import { About } from "@/types/About";
 import LinkButton from "./LinkButton";
+import EmailButton from "./EmailButton";
 
 type Props = {
   aboutData: About;
@@ -17,7 +18,7 @@ const AboutButtonField = ({ aboutData }: Props) => {
           <ClipBoardButton text={aboutData.tlf} label={aboutData.tlf} />
         ) : null}
         {aboutData.mail ? (
-          <ClipBoardButton text={aboutData.mail} label={"mail"} />
+          <EmailButton email={aboutData.mail} label={aboutData.mail} />
         ) : null}
 
        
