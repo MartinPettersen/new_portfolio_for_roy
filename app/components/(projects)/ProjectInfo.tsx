@@ -60,17 +60,17 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen h-screen bg-[#D9D9D92B] backdrop-blur-sm absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <article className="bg-[#E8D5B0] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[393px] md:w-[1294px] p-2 flex flex-col items-center justify-center">
-        <div className="flex items-center justify-evenly w-[100%] h-[80%] ">
-          <div className="hidden md:block w-[50%]">
+      <article className="bg-[#E8D5B0] h-[80%] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[393px] md:w-[70%] p-0 flex flex-col items-center justify-center">
+        <div className="flex items-center  justify-evenly w-[100%] h-[90%] ">
+          <div className="hidden md:block w-[53%] ">
             <ProjectImageContainer
               project={project}
               projectIndex={projectIndex}
             />
           </div>
 
-          <div className="flex items-center justify-start md:h-[84%]  flex-col w-full md:w-[50%] ">
-            <h2 className="font-bold font-rubik text-xl border-stone-600/70">
+          <div className="flex items-start justify-center md:h-[84%]  flex-col w-full md:w-[45%] ">
+            <h2 className=" font-rubik text-4xl">
               {project.content[projectIndex].slidetitle
                 ? project.content[projectIndex].slidetitle
                 : null}
@@ -81,6 +81,8 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
                 projectIndex={projectIndex}
               />
             </div>
+            <div className="flex items-center justify-center w-[90%] ">
+
             {project.content?.length && (
               <div className="mt-8 w-full font-work-sans text-stone-800/90">
                 {project.content &&
@@ -92,9 +94,11 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
                   )}
               </div>
             )}
+            </div>
+
           </div>
         </div>
-        <div className="text-white my-2 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly"></div>
+        <div className="text-white my-0 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly"></div>
         <ProjectNavigation
           project={project}
           nextProject={nextProject}

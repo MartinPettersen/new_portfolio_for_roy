@@ -9,19 +9,22 @@ type Props = {
 
 const ProjectImageContainer = ({ project, projectIndex }: Props) => {
   return (
-    <>
+    <div className=" pt-4 flex items-center">
+
+    <div className="flex ml-4 mt-4   w-[500px]  h-[500px] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
       {project.content &&
         project.content.length > 0 &&
         project.content[projectIndex].image && (
           <Image
-            className="pl-4 "
-            src={project.content[projectIndex].image.asset}
-            alt={project.content[projectIndex].image.alt || project.title}
-            width={588}
-            height={493}
+          className="shadow-project-image"
+          src={project.content[projectIndex].image.asset}
+          alt={project.content[projectIndex].image.alt || project.title}
+          width={450}
+          height={450}
           />
         )}
-    </>
+    </div>
+        </div>
   );
 };
 

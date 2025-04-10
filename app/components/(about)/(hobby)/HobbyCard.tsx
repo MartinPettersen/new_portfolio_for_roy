@@ -20,7 +20,7 @@ const HobbyCard = ({ hobby }: Props) => {
     <div className="flex w-[384px]  h-[388px] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
       {hobby.image && (randomNumber > -100) ? (
         <Image
-          className={`svg-shadow`}
+          className={`shadow-project-image`}
           style={{ transform: `rotate(${randomNumber}deg)` }}
           src={hobby.image}
           alt="hobby image"

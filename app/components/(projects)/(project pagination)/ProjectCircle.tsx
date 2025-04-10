@@ -9,7 +9,7 @@ type Props = {
 const ProjectCircle = ({ projectIndex, index, action }: Props) => {
   return (
     <button
-      className="w-14 h-14 bg-[#F3E9D6] inner-shadow flex items-center justify-center rounded-full"
+      className="w-14 h-14 bg-[#F3E9D6] inner-shadow flex items-center justify-center rounded-full scale-50"
       onClick={() => action(index)}
     >
       {projectIndex != index ? (

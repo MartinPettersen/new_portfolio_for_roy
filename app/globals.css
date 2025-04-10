@@ -56,7 +56,11 @@ body {
 }
 
 .shadow-project-card {
-  box-shadow: 6px 6px 0px 6px rgba(40, 49, 60, 0.7) ;
+  filter: drop-shadow(6px 6px 0px  rgba(40, 49, 60, 0.7)) ;
+}
+
+.shadow-project-image {
+  filter: drop-shadow(4px 4px 0px  rgba(40, 49, 60, 0.25)) ;
 }
 
 .shadow-weak {
