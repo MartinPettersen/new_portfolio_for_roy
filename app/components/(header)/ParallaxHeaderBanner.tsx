@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, {  useRef } from "react";
 import PostItCombo from "../(postit)/PostItCombo";
 import { SiteData } from "@/types/SiteData";
 import Loading from "../(loading)/Loading";
@@ -11,21 +11,8 @@ type Props = {
 };
 
 const ParallaxHeaderBanner = ({ siteData, setToggled, toggled }: Props) => {
-  const [scrollY, setScrollY] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   if (!siteData.bannerquote) {
     return <Loading />;
