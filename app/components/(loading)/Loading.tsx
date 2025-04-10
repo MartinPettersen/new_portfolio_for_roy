@@ -26,7 +26,7 @@ const Loading = () => {
         />
         <foreignObject x="0" y="70" width="167" height="161">
           <div className="text-center text-white font-permanent-marker">
-            <span>Loading&nbsp;</span>
+            <span>Fetching files&nbsp;</span>
             <span className="min-w-4 inline-block text-left">
               <Typewriter
                 words={["..."]}
