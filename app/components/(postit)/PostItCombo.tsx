@@ -18,7 +18,10 @@ const PostItCombo = ({siteData, toggled, setToggled}: Props) => {
 
   return (
     <>
+      <div className={`${!toggled? "" : "opacity-0"}`}>
+
       <PostItButton togglePostIt={togglePostIt} />
+      </div>
       <PostItBoard toggled={toggled} togglePostIt={togglePostIt} siteData={siteData} />
     </>
   );

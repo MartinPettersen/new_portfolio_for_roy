@@ -45,7 +45,7 @@ const PostItBoard = ({ toggled, togglePostIt, siteData }: Props) => {
       <div
         className=" w-screen h-screen z-[9999] fixed top-0 left-0"
       >
-        <div className="z-[9999] absolute py-6 px-14">
+        <div className="z-[9999] absolute top-8 left-26">
         <TrashBucket deletePostIts={deletePostIts}/>
         </div>
         <div 
