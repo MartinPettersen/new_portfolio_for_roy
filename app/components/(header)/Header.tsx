@@ -1,7 +1,8 @@
 import { getSiteData } from "@/sanity/sanity-utils";
 //import HeaderBanner from "./HeaderBanner";
 import Loading from "../(loading)/Loading";
-import ParallaxHeaderBanner from "./ParallaxHeaderBanner";
+//import ParallaxHeaderBanner from "./ParallaxHeaderBanner";
+import ComboBanner from "./ComboBanner";
 
 
 
@@ -14,7 +15,7 @@ export default async function Header() {
 
   return (
     <header className="w-full flex flex-col parallax">
-      <ParallaxHeaderBanner siteData={siteData} />
+      <ComboBanner siteData={siteData}/>
     </header>
   );
 }

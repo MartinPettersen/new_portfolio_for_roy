@@ -1,15 +1,16 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import PostItButton from "./PostItButton";
 import PostItBoard from "./PostItBoard";
 import { SiteData } from "@/types/SiteData";
 
 type Props = {
   siteData: SiteData;
+  setToggled: React.Dispatch<React.SetStateAction<boolean>>;
+  toggled: boolean
 };
 
-const PostItCombo = ({siteData}: Props) => {
-  const [toggled, setToggled] = useState(false);
+const PostItCombo = ({siteData, toggled, setToggled}: Props) => {
 
   const togglePostIt = () => {
     setToggled(!toggled);

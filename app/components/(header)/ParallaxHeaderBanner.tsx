@@ -6,9 +6,11 @@ import Loading from "../(loading)/Loading";
 
 type Props = {
   siteData: SiteData;
+  setToggled: React.Dispatch<React.SetStateAction<boolean>>;
+  toggled: boolean
 };
 
-const ParallaxHeaderBanner = ({ siteData }: Props) => {
+const ParallaxHeaderBanner = ({ siteData, setToggled, toggled }: Props) => {
   const [scrollY, setScrollY] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -43,7 +45,7 @@ const ParallaxHeaderBanner = ({ siteData }: Props) => {
           willChange: "transform",
         }}
       >
-        <PostItCombo siteData={siteData} />
+        <PostItCombo siteData={siteData} toggled={toggled} setToggled={setToggled} />
       </div>
 
       <h3
