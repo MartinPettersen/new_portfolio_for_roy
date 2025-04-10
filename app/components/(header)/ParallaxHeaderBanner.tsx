@@ -7,7 +7,7 @@ import Loading from "../(loading)/Loading";
 type Props = {
   siteData: SiteData;
   setToggled: React.Dispatch<React.SetStateAction<boolean>>;
-  toggled: boolean
+  toggled: boolean;
 };
 
 const ParallaxHeaderBanner = ({ siteData, setToggled, toggled }: Props) => {
@@ -31,33 +31,27 @@ const ParallaxHeaderBanner = ({ siteData, setToggled, toggled }: Props) => {
     return <Loading />;
   }
 
-  const postItYOffset = scrollY * 0.7;
-  const quoteYOffset = scrollY * 0.7;
-
   return (
-    <div
-      ref={headerRef}
-      className="hidden md:flex py-2 px-6 items-center justify-between flex-row relative "
-    >
+    <>
       <div
-        style={{
-          transform: `translateY(${postItYOffset}px)`,
-          willChange: "transform",
-        }}
+        ref={headerRef}
+        className="hidden  md:flex py-2 px-6 items-center justify-between flex-row fixed top-0 left-0 right-0 z-0 "
       >
-        <PostItCombo siteData={siteData} toggled={toggled} setToggled={setToggled} />
-      </div>
+        <div>
+          <PostItCombo
+            siteData={siteData}
+            toggled={toggled}
+            setToggled={setToggled}
+          />
+        </div>
 
-      <h3
-        className="w-[80%] text-3xl font-space-mono"
-        style={{
-          transform: `translateY(${quoteYOffset}px)`,
-          willChange: "transform",
-        }}
-      >
-        {siteData.bannerquote}
-      </h3>
-    </div>
+        <h3 className="w-[80%] text-3xl font-space-mono">
+          {siteData.bannerquote}
+        </h3>
+      </div>
+      <div className="hidden md:block h-[220px]"></div>
+      <div className="relative z-10"></div>
+    </>
   );
 };
 
