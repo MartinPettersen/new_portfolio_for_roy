@@ -42,11 +42,11 @@ export async function getProject(slug: string): Promise<Project> {
         title,
         "slug": slug.current,
         "coverimage": coverimage.asset->url,
-        url,
         content[]{
           _type == 'contentBlock' => {
             content,
             slitetitle,
+            url,
             image{
               "asset": asset->url, // Fetch the URL here
               alt

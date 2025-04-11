@@ -14,6 +14,12 @@ const contentBlock = {
             name: 'slidetitle',
             title: 'SlideTitle',
             type: 'string',
+        },    
+        {
+            name: "url",
+            title: "URL",
+            description: "Url for å linke til prosjekter på andre sider",
+            type: "string"
         },
         {
             name: "image",

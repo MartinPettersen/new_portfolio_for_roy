@@ -71,6 +71,11 @@ h3 {
   color: #d029ba;
 }
 
+a {
+  font-family: var(--font-space-mono);
+
+}
+
 .shadow-custom {
   box-shadow: 6px -6px 0px 6px rgba(40, 49, 60, 0.7) ;
 }
