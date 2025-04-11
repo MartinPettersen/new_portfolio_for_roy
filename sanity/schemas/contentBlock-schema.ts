@@ -21,6 +21,13 @@ const contentBlock = {
             description: "Url for å linke til prosjekter på andre sider",
             type: "string"
         },
+            
+        {
+            name: "urllabel",
+            title: "URLLabel",
+            description: "Url label linken over",
+            type: "string"
+        },
         {
             name: "image",
             title: "Image",

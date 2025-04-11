@@ -43,16 +43,16 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
     console.log("projectIndex", projectIndex + 1);
     console.log("project.content.length", project.content.length);
 
-   if ( projectIndex < totalSlides -1 ) { 
-    setProjectIndex(projectIndex + 1)
-   }
+    if (projectIndex < totalSlides - 1) {
+      setProjectIndex(projectIndex + 1);
+    }
   };
 
   const goTothisIndex = (index: number) => {
     setProjectIndex(index);
   };
 
-  const circleIndex = getCircleIndex(projectIndex)
+  const circleIndex = getCircleIndex(projectIndex);
 
   return (
     <div className="fixed inset-0 z-[10000] flex flex-col w-screen h-screen items-center justify-center">
@@ -82,20 +82,26 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
               />
             </div>
             <div className="flex items-center justify-center w-[90%] ">
-
-            {project.content?.length && (
-              <div className="mt-8 w-full font-work-sans text-stone-800/90">
-                {project.content &&
-                  project.content.length > 0 &&
-                  project.content[projectIndex]?.content && (
-                    <PortableText
-                      value={project.content[projectIndex].content}
-                    />
-                  )}
-              </div>
-            )}
+              {project.content?.length && (
+                <div className="mt-8 w-full font-work-sans text-stone-800/90">
+                  {project.content &&
+                    project.content.length > 0 &&
+                    project.content[projectIndex]?.content && (
+                      <>
+                        <PortableText
+                          value={project.content[projectIndex].content}
+                        />
+                          {project.content[projectIndex].url
+                            ? 
+                        <a href={project.content[projectIndex].url} className="font-space-mono underline italic font-rubik ">
+                            {project.content[projectIndex].url}
+                        </a>
+                            : null}
+                      </>
+                    )}
+                </div>
+              )}
             </div>
-
           </div>
         </div>
         <div className="text-white my-0 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly"></div>

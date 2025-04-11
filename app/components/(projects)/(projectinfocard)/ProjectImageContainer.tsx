@@ -15,11 +15,12 @@ const ProjectImageContainer = ({ project, projectIndex }: Props) => {
           project.content.length > 0 &&
           project.content[projectIndex].image && (
             <Image
-              className="shadow-project-image"
+              className="shadow-project-image  w-[90%]  h-[90%] object-scale-down"
               src={project.content[projectIndex].image.asset}
               alt={project.content[projectIndex].image.alt || project.title}
               width={450}
               height={450}
+              
             />
           )}
       </div>
