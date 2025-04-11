@@ -1,7 +1,6 @@
 import React from "react";
 import ImageContainer from "./ImageContainer";
 import AboutButtonField from "./AboutButtonField";
-import CertifiedHuman from "./CertifiedHuman";
 import { About } from "@/types/About";
 
 type Props = {
@@ -20,7 +19,6 @@ const AboutLeftSection = ({aboutData}: Props) => {
         <></>
       )}
       <AboutButtonField aboutData={aboutData} />
-      <CertifiedHuman />
     </div>
   );
 };

@@ -17,9 +17,9 @@ const HeaderBanner = ({ siteData, setToggled, toggled }: Props) => {
   return (
     <div className="hidden md:flex  py-2 px-6 items-center justify-between flex-row">
       <PostItCombo siteData={siteData} toggled={toggled} setToggled={setToggled}/>
-      <h3 className="w-[80%] text-3xl font-space-mono">
+      <h4 className="w-[80%] text-[32px] font-bold text-black font-space-mono">
         {siteData.bannerquote}
-      </h3>
+      </h4>
     </div>
   );
 };

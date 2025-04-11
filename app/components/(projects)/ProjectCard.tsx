@@ -34,7 +34,10 @@ const ProjectCard = ({ project }: Props) => {
           className=" w-[356px] h-[220px] md:w-[810px] md:h-[552px] rotate-[5deg] bg-cover"
           style={{
             backgroundImage: `url(${coverimage})`,
-            opacity: 0.1,
+            opacity: 0.05,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            backgroundSize: "contain"
           }}
         ></div>
       </div>
@@ -45,7 +48,7 @@ const ProjectCard = ({ project }: Props) => {
         onClick={() => setToggleProjectDisplay(true)}
       >
         <div className="w-[100%] flex flex-col items-center h-[100%] md:h-[80%] justify-center px-2 ">
-          <h3 className="text-[40px] text-center font-semibold font-libre-baskerville">{title}</h3>
+          <h3 className=" text-center font-semibold font-libre-baskerville">{title}</h3>
           <p className="line-clamp-3 text-[22px] flex items-center text-center justify-center leading-6 text-[#181818] font-rubik">
             {excerpt}
           </p>

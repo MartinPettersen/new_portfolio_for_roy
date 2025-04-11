@@ -70,6 +70,10 @@ h2 {
 
 h3 {
   color: #d029ba;
+  font-weight: bold;
+  font-size: 40;
+  font-family: var(--font-libre-baskerville);
+
 }
 
 a {
@@ -78,6 +82,12 @@ a {
 
 nav {
   font-family: var(--font-space-mono);
+  font-size: 32px
+}
+
+nav:active {
+  font-family: var(--font-space-mono);
+  font-size: 36px
 }
 
 .shadow-custom {

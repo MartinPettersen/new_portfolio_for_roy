@@ -32,9 +32,9 @@ const ParallaxHeaderBanner = ({ siteData, setToggled, toggled }: Props) => {
           />
         </div>
 
-        <h3 className="w-[80%] text-3xl font-space-mono">
+        <h4 className="w-[80%] text-[32px] font-bold text-black font-space-mono">
           {siteData.bannerquote}
-        </h3>
+        </h4>
       </div>
       <div className="hidden md:block h-[220px]"></div>
       <div className="relative z-10"></div>
