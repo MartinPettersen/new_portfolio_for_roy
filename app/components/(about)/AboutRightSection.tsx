@@ -9,9 +9,9 @@ type Props = {
 const AboutRightSection = ({ aboutData }: Props) => {
   return (
     <div className="w-[50%] flex flex-col items-start  px-8 h-full justify-center m-4">
-      <h3 className="font-bold flex w-full items-center justify-start text-3xl pb-8 font-libre-baskerville">
+      <h1 className="font-bold flex w-full items-center justify-start text-3xl pb-8 font-libre-baskerville">
         {aboutData.fullName}
-      </h3>
+      </h1>
       <div className="">
         {aboutData.about.map(
           (content, i: number) =>

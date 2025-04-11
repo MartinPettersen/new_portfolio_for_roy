@@ -58,6 +58,7 @@ p {
 h1 {
   color: #29d0bf;
   font-family: var(--font-libre-baskerville);
+  font-size: 40px
 }
 
 h2 {
@@ -73,7 +74,10 @@ h3 {
 
 a {
   font-family: var(--font-space-mono);
+}
 
+nav {
+  font-family: var(--font-space-mono);
 }
 
 .shadow-custom {
