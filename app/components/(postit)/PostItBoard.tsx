@@ -11,14 +11,17 @@ type Props = {
 };
 
 const PostItBoard = ({ toggled, togglePostIt, siteData }: Props) => {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0, lifeTimer: 1 });
   const [isDeleteing, setIsDeleting] = useState(false)
   const [trashCanPosition, setTrashCanPosition] = useState({ x: 0, y: 0})
-  const [postIts, setPostIts] = useState<{ x: number; y: number }[]>([]);
+  const [postIts, setPostIts] = useState<{ x: number; y: number, lifeTimer: number }[]>([]);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
+        //167 161
+      const num = Math.floor(Math.random() * 1000) + 1;
+
+      setCursorPosition({ x: (e.clientX - (167 / 2)) , y: (e.clientY - (161 / 2)), lifeTimer: num });
     };
 
     if (toggled) {
@@ -67,11 +70,12 @@ const PostItBoard = ({ toggled, togglePostIt, siteData }: Props) => {
           postIts.map((postIt, i) => (
             <div
               key={i}
-              className={` absolute transition-all duration-1000 ease-in-out ${isDeleteing ? 'opacity-100' : ''}`}
+              className={` absolute transition-all  ease-in-out ${isDeleteing ? 'opacity-100' : ''}`}
               style={{
                 left: isDeleteing ? `${trashCanPosition.x}px` : `${postIt.x}px`,
                 top: isDeleteing ? `${trashCanPosition.y}px` : `${postIt.y}px`,
                 transform: isDeleteing ? 'scale(0.1)' : 'scale(1)',
+                transitionDuration: `${postIt.lifeTimer}ms`,
               }}
             >
               <PostOrganizer index={postIts.length} siteData={siteData} />
