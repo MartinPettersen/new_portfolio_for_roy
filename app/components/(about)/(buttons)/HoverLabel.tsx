@@ -6,7 +6,7 @@ type Props = {
 
 const HoverLabel = ({hoverLabel}: Props) => {
   return (
-    <div className="z-2 absolute hidden group-hover:flex px-2 bg-[#F3E9D6] border-[1px]">
+    <div className="z-2 absolute hidden group-hover:flex px-2 mt-18 text-[#F7F7F7] bg-black border-[1px] border-[#F7F7F7]">
     {hoverLabel}
   </div>
   )
