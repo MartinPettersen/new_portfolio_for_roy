@@ -6,7 +6,7 @@ type Props = {
 
 const PostItLabel = ({label}: Props) => {
   return (
-    <div className="text-center w-full h-full overflow-hidden font-permanent-marker flex items-center justify-center">{label}</div>
+    <div className="text-center w-full h-full overflow-hidden break-all font-permanent-marker flex items-center justify-center">{label}</div>
 
   )
 }
