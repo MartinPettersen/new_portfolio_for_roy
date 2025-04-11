@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #90CCC5;
-    --foreground: #0a0a0a;
+    --foreground: #181818;
   }
 }
 
@@ -23,6 +23,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-work-sans);
+
 }
 
 .text-with-underline > * { 
@@ -51,25 +52,23 @@ body {
   margin: 50px;
 }
 
-p {
-  color: #3498db;
+.paragraph {
+  font-size: 20px;
+  font-family: var(--font-work-sans);
 }
 
 h1 {
-  color: #29d0bf;
   font-family: var(--font-libre-baskerville);
-  font-size: 40px
+  font-size: 64px
 }
 
 h2 {
-  color: #d02929;
   font-family: var(--font-rubik);
-  font-size: 32px;
-
+  font-size: 24px;
+  line-height: 2;
 }
 
 h3 {
-  color: #d029ba;
   font-weight: bold;
   font-size: 40;
   font-family: var(--font-libre-baskerville);
@@ -90,6 +89,10 @@ nav:active {
   font-size: 36px
 }
 
+.test{
+  font-size: 48px
+
+}
 .shadow-custom {
   box-shadow: 6px -6px 0px 6px rgba(40, 49, 60, 0.7) ;
 }

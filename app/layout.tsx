@@ -28,7 +28,7 @@ const rubik = Rubik({
 })
 
 const workSans = Work_Sans({
-  weight: "400",
+  weight: "300",
   variable: "--font-work-sans",
   subsets:["latin"],
 })

@@ -83,7 +83,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
             </div>
             <div className="flex items-center justify-center w-[90%] ">
               {project.content?.length && (
-                <div className="mt-8 w-full font-work-sans text-stone-800/90">
+                <div className="mt-8 w-full paragraph font-work-sans text-stone-800/90">
                   {project.content &&
                     project.content.length > 0 &&
                     project.content[projectIndex]?.content && (

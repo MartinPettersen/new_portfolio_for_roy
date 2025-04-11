@@ -12,7 +12,7 @@ const AboutRightSection = ({ aboutData }: Props) => {
       <h1 className="font-bold flex w-full items-center justify-start text-3xl pb-8 font-libre-baskerville">
         {aboutData.fullName}
       </h1>
-      <div className="">
+      <div className="font-extralight paragraph">
         {aboutData.about.map(
           (content, i: number) =>
             content && <PortableText key={i} value={content} />
