@@ -18,7 +18,6 @@ const PostOrganizer = ({ index, siteData }: Props) => {
 
   useEffect(() => {
     setRandomNumber(Math.floor(Math.random() * 4) + 1);
-    console.log("sitedata", siteData)
     if (siteData.quotes) {
       setLabel(siteData.quotes[Math.floor(Math.random() * siteData.quotes.length) + 0]);
     }

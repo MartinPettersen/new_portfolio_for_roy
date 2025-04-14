@@ -9,7 +9,6 @@ const page = async ({ params }: { params: Params }) => {
 
     const {project}  =  await params
     const projectData = await getProject(project)
-    console.log("single project", project)
   return (
     <div>
         {projectData.title}

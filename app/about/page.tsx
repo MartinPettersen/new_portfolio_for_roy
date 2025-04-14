@@ -10,7 +10,6 @@ import CertifiedHuman from "../components/(about)/CertifiedHuman";
 const page = async () => {
   const aboutData = await getAbout();
 
-  console.log("aboutData", aboutData);
   if (!aboutData)
     return (
       <div className="w-screen h-screen flex items-center justify-center bg-orange-400">

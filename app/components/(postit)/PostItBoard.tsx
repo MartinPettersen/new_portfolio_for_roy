@@ -35,7 +35,6 @@ const PostItBoard = ({ toggled, togglePostIt, siteData }: Props) => {
 
   const addPostIt = () => {
     setPostIts([...postIts, cursorPosition]);
-    console.log("postIts", postIts);
   };
 
   const deletePostIts = () => {

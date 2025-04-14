@@ -13,7 +13,6 @@ type Props = {
 
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const [projectIndex, setProjectIndex] = useState(0);
-  console.log(project);
 
   if (!project || !project.content) return <Loading />;
 
@@ -40,8 +39,6 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   };
 
   const nextProject = () => {
-    console.log("projectIndex", projectIndex + 1);
-    console.log("project.content.length", project.content.length);
 
     if (projectIndex < totalSlides - 1) {
       setProjectIndex(projectIndex + 1);
