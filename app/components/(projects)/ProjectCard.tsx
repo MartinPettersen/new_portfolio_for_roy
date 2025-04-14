@@ -18,7 +18,7 @@ const ProjectCard = ({ project }: Props) => {
   const { _id, title, excerpt, coverimage, progress, tags } = project;
 
   return (
-    <div>
+    <div className="group">
       {toggleProjectDisplay
         ? createPortal(
             <ProjectDisplay
@@ -28,10 +28,10 @@ const ProjectCard = ({ project }: Props) => {
             document.body
           )
         : null}
-      <div className="z-[-2] bg-[#F3E9D6] absolute w-[374px] h-[133px] md:w-[410px] md:h-[252px]"></div>
-      <div className="z-[-1] absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px] hidden md:flex items-center justify-center overflow-hidden">
+      <div className="z-[-2]  bg-[#F3E9D6] absolute w-[374px] h-[133px] md:w-[410px] md:h-[252px]"></div>
+      <div className="z-[-1] group-hover:hidden  absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px] hidden md:flex items-center justify-center overflow-hidden">
         <div
-          className=" w-[356px] h-[220px] md:w-[810px] md:h-[552px] rotate-[5deg] bg-cover"
+          className=" w-[356px] h-[220px] group-hover:hidden md:w-[810px] md:h-[552px] rotate-[5deg] bg-cover"
           style={{
             backgroundImage: `url(${coverimage})`,
             opacity: 0.05,
@@ -44,7 +44,7 @@ const ProjectCard = ({ project }: Props) => {
 
       <article
         key={_id}
-        className="flex  py-2 custom-mouse-pointer px-1 flex-col items-center w-[374px] h-[133px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 inner-shadow-image-card bg-fixed bg-center bg-no-repeat bg-cover"
+        className="flex group py-2 custom-mouse-pointer px-1 flex-col items-center w-[374px] h-[133px] md:w-[410px] md:h-[252px] justify-between bg-opacity-20 inner-shadow-image-card bg-fixed bg-center bg-no-repeat bg-cover"
         onClick={() => setToggleProjectDisplay(true)}
       >
         <div className="w-[100%] flex flex-col items-center h-[100%] md:h-[80%] justify-center px-2 ">
