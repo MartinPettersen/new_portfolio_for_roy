@@ -1,0 +1,73 @@
+import React from 'react'
+import ProjectNavigation from '../(project pagination)/ProjectNavigation'
+import { Project } from "@/types/Project";
+import { PortableText } from "@portabletext/react";
+import ProjectImageContainer from './ProjectImageContainer';
+
+type Props = {
+  project: Project;
+  projectIndex: number;
+  goback: () => void;
+  nextProject: () => void;
+  goTothisIndex: (index: number) => void;
+  circleIndex: number
+};
+const ProjectInfoCard = ({project, projectIndex, goback, nextProject, goTothisIndex, circleIndex}: Props) => {
+  return (
+    <article className="bg-[#E8D5B0] h-[80%] rounded-2xl border-[1px] shadow-project-card relative z-[10000] w-[100%] md:w-[70%] p-0 flex flex-col items-center justify-center">
+    <div className="flex items-center  justify-evenly w-[100%] h-[90%] ">
+      <div className="hidden md:block w-[53%] ">
+        <ProjectImageContainer
+          project={project}
+          projectIndex={projectIndex}
+        />
+      </div>
+
+      <div className="flex items-start justify-center md:h-[84%]  flex-col w-full md:w-[45%] ">
+        <h2 className=" font-rubik text-4xl">
+          {project.content[projectIndex].slidetitle
+            ? project.content[projectIndex].slidetitle
+            : null}
+        </h2>
+        <div className="md:hidden w-full">
+          <ProjectImageContainer
+            project={project}
+            projectIndex={projectIndex}
+          />
+        </div>
+        <div className="flex items-center justify-center w-[90%] ">
+          {project.content?.length && (
+            <div className="mt-8 w-full paragraph font-work-sans text-stone-800/90">
+              {project.content &&
+                project.content.length > 0 &&
+                project.content[projectIndex]?.content && (
+                  <>
+                    <PortableText
+                      value={project.content[projectIndex].content}
+                    />
+                      {project.content[projectIndex].url
+                        ? 
+                    <a href={project.content[projectIndex].url} className="font-space-mono underline italic font-rubik ">
+                        {project.content[projectIndex].url}
+                    </a>
+                        : null}
+                  </>
+                )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+    <div className="text-white my-0 w-[63%] flex z-[10000] h-[10%] items-center justify-evenly"></div>
+    <ProjectNavigation
+      project={project}
+      nextProject={nextProject}
+      goTothisIndex={goTothisIndex}
+      goback={goback}
+      projectIndex={circleIndex}
+    />
+  </article>
+  )
+}
+
+export default ProjectInfoCard
