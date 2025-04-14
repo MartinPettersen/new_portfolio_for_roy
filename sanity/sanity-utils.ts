@@ -30,7 +30,7 @@ export async function getProjects(): Promise<Project[]> {
         }`,
         {},
         {
-          cache: 'no-store'
+          next: { revalidate: 14400 }
         }
   )
 }
@@ -62,7 +62,7 @@ export async function getProject(slug: string): Promise<Project> {
         }`,
     { slug },
     {
-      cache: 'no-store'
+      next: { revalidate: 14400 }
     }
   )
 }
@@ -87,7 +87,7 @@ export async function getAbout() {
         }`,
         {},
         {
-          cache: 'no-store'
+          next: { revalidate: 14400 }
         }
   )
   return data[0] || null;
@@ -103,7 +103,7 @@ export async function getSiteData() {
       }`,
     {},
     {
-      cache: 'no-store'
+      next: { revalidate: 14400 }
     }
   )
   return data[0] || null;
