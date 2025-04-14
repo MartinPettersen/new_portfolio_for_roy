@@ -17,11 +17,11 @@ const DownloadButton = ({ label, cv }: Props) => {
     <>
       <button
         onClick={() => downloadCV()}
-        className="group font-space-mono py-2 px-4 text-2xl custom-mouse-pointer bg-[#F3E9D6] hover:bg-[#9E9178] hover:font-bold hover:text-white inner-shadow-button inline-flex items-center justify-center gap-2"
+        className="group font-space-mono py-2 px-4 text-[14px] md:text-2xl custom-mouse-pointer bg-[#F3E9D6] hover:bg-[#9E9178] hover:font-bold hover:text-white inner-shadow-button inline-flex items-center justify-center gap-2"
       >
         {label}
         <svg
-          className=" group-hover:brightness-0 group-hover:invert"
+          className="w-[18px] h-[18px] md:w-[25px] md:h-[30px]  group-hover:brightness-0 group-hover:invert"
           width="25"
           height="30"
           viewBox="0 0 35 39"

@@ -19,7 +19,7 @@ const page = async () => {
 
   return (
     <div className="flex flex-col pt-8 rounded-t-[18px] rounded-br-[18px] rounded-bl-[18px] shadow-nav z-[12] relative bg-[#E8D5B0] items-center justify-center">
-      <div className="w-full p-4  flex items-start justify-evenly">
+      <div className="w-full flex-col md:flex-row md:p-4  flex items-start justify-evenly">
         <AboutLeftSection aboutData={aboutData} />
         <div className="z-10 hidden absolute pr-[140px] pt-2">
           <Arrow />

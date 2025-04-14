@@ -4,12 +4,12 @@ import AboutButtonField from "./AboutButtonField";
 import { About } from "@/types/About";
 
 type Props = {
-    aboutData: About
-}
+  aboutData: About;
+};
 
-const AboutLeftSection = ({aboutData}: Props) => {
+const AboutLeftSection = ({ aboutData }: Props) => {
   return (
-    <div className="w-[50%] flex flex-col items-center justify-center">
+    <div className="w-full md:w-[50%] flex flex-row md:flex-col items-center justify-evenly md:justify-center">
       {aboutData.portrait ? (
         <ImageContainer
           portrait={aboutData.portrait}
