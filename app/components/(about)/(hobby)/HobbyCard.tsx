@@ -17,10 +17,10 @@ const HobbyCard = ({ hobby }: Props) => {
   }, []);
 
   return (
-    <div className="flex w-[384px]  h-[388px] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
+    <div className="flex w-[163px]  h-[165px] md:w-[384px]  md:h-[388px] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
       {hobby.image && (randomNumber > -100) ? (
         <Image
-          className={`shadow-project-image`}
+          className={`shadow-project-image  w-[136px]  h-[136px] md:w-[315px]  md:h-[315px]`}
           style={{ transform: `rotate(${randomNumber}deg)` }}
           src={hobby.image}
           alt="hobby image"

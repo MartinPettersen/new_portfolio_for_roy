@@ -3,7 +3,7 @@ import React from "react";
 const CertifiedHuman = () => {
   return (
     <svg
-    className="m-4"
+    className="md:m-4 hidden md:block"
       width="399"
       height="191"
       viewBox="0 0 399 191"
