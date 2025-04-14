@@ -9,7 +9,7 @@ const ProjectButtonLeft = ({ action }: Props) => {
     <div className="group inline-block">
 
     <svg
-      className={"svg-shadow hover:cursor-pointer transition-colors scale-50 group-hover:scale-60"}
+      className={"svg-shadow custom-mouse-pointer transition-colors scale-50 group-hover:scale-60"}
       onClick={() => action()}
       width="72"
       height="81"

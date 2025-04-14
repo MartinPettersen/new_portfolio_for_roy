@@ -19,11 +19,11 @@
   }
 }
 
-body {
+html,body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-work-sans);
-
+  cursor: url('/Arrow.svg'), auto;
 }
 
 .text-with-underline > * { 
@@ -55,6 +55,10 @@ body {
 .paragraph {
   font-size: 20px;
   font-family: var(--font-work-sans);
+}
+
+.custom-mouse-pointer {
+  cursor: url('/CustomMousePointer.svg'), auto;
 }
 
 h1 {

@@ -8,7 +8,7 @@ type Props = {
 const PostItButton = ({ togglePostIt }: Props) => {
   return (
     <svg
-      className="cursor-pointer"
+      className="custom-mouse-pointer"
       onClick={() => togglePostIt()}
       width="220"
       height="183"
