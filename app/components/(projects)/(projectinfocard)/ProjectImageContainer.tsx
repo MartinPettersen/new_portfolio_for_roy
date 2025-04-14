@@ -9,8 +9,8 @@ type Props = {
 
 const ProjectImageContainer = ({ project, projectIndex }: Props) => {
   return (
-    <div className=" pt-4 flex items-center">
-      <div className="flex ml-4 mt-4   w-[80%]  h-[80%] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
+    <div className=" md:pt-4 flex items-center justify-center">
+      <div className="flex md:mr-12 md:mt-4 w-[96%] md:w-[80%]  h-[80%] bg-[#F3E9D6] items-center justify-center inner-shadow-image-card">
         {project.content &&
           project.content.length > 0 &&
           project.content[projectIndex].image && (
