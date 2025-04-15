@@ -16,8 +16,8 @@ const DrawingBoard = () => {
     updateCanvasSize();
 
     const draw = (e: MouseEvent) => {
-      context!.lineWidth = 6;
-      context!.lineCap = "butt";
+      context!.lineWidth = 10;
+      context!.lineCap = "round";
       context!.strokeStyle = "pink";
       context!.lineTo(e.pageX, e.pageY);
       context!.stroke();
@@ -26,11 +26,11 @@ const DrawingBoard = () => {
     };
 
     canvas!.addEventListener("mousemove", draw);
-    window.addEventListener("resize", updateCanvasSize);
+    document.addEventListener("resize", updateCanvasSize);
 
     return () => {
       canvas!.removeEventListener("mousemove", draw);
-      window.removeEventListener("resize", updateCanvasSize);
+      document.removeEventListener("resize", updateCanvasSize);
     };
   }, []);
 
@@ -38,7 +38,7 @@ const DrawingBoard = () => {
     ? createPortal(
         <canvas
           ref={canvasRef}
-          className="absolute top-0 left-0 z-[9999]"
+          className="absolute top-0 left-0 z-[9999] "
           style={{ width: "100%", height: "100%", position: "absolute" }}
         />,
         document.body

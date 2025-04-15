@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Image as SanityImage} from "next-sanity/image";
+import { Image as SanityImage } from "next-sanity/image";
 import PushPin from "./PushPin";
 import { motion } from "framer-motion";
 import HiddenImage from "./(specialEffects)/HiddenImage";
@@ -20,8 +20,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
 
   return (
     <div className="w-[185px] h-[185px] md:w-[600px] flex relative items-center justify-center md:h-[600px] bg-[#F3E9D6] inner-shadow-image-card">
-      
-        <HiddenImage />
+      <HiddenImage />
       <motion.div
         onClick={handlePushPinClick}
         className={`top-[0] md:top-[-20] left-[65%] z-[30] absolute custom-mouse-pointer
@@ -31,7 +30,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
           isFalling
             ? {
                 x: 400,
-                y: offScreenDistance -150,
+                y: offScreenDistance - 150,
                 rotate: 720,
               }
             : {}
@@ -79,9 +78,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
           width={500}
           height={500}
         />
-        
       </motion.div>
-      
     </div>
   );
 };
