@@ -18,7 +18,7 @@ const DrawingBoard = () => {
     const draw = (e: MouseEvent) => {
       context!.lineWidth = 10;
       context!.lineCap = "round";
-      context!.strokeStyle = "pink";
+      context!.strokeStyle = "#E6A1D9";
       context!.lineTo(e.pageX, e.pageY);
       context!.stroke();
       context!.beginPath();

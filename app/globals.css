@@ -34,6 +34,16 @@ html,body {
   cursor: url('/Arrow.svg'), auto;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+
 .text-with-underline > * { 
   position: relative;
   padding-bottom: 0.2em;
