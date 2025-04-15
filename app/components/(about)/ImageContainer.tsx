@@ -31,7 +31,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
           isFalling
             ? {
                 x: 400,
-                y: offScreenDistance,
+                y: offScreenDistance -150,
                 rotate: 720,
               }
             : {}
@@ -56,7 +56,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
           isFalling
             ? {
                 x: -200,
-                y: offScreenDistance,
+                y: offScreenDistance - 600,
                 rotate: -220,
               }
             : {}
