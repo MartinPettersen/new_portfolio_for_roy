@@ -29,7 +29,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
         animate={
           isFalling
             ? {
-                x: 400,
+                x: 800,
                 y: offScreenDistance - 150,
                 rotate: 720,
               }
@@ -37,10 +37,10 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
         }
         transition={{
           type: "keyframes",
-          duration: 2,
+          duration: 1,
           ease: "easeIn",
           rotate: {
-            duration: 2,
+            duration: 1,
             repeat: 0,
             ease: "linear",
           },
@@ -62,7 +62,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
         }
         transition={{
           type: "keyframes",
-          duration: 2.5,
+          duration: 1.5,
           ease: "easeIn",
           rotate: {
             duration: 2.5,
