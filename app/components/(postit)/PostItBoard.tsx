@@ -77,7 +77,7 @@ const PostItBoard = ({ toggled, togglePostIt, siteData }: Props) => {
                 transitionDuration: `${postIt.lifeTimer}ms`,
               }}
             >
-              <PostOrganizer index={postIts.length} siteData={siteData} />
+              <PostOrganizer index={postIts.length} siteData={siteData} isDeleting={isDeleteing}/>
             </div>
           ))
         ) : (
