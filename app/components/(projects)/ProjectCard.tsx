@@ -28,7 +28,7 @@ const ProjectCard = ({ project }: Props) => {
             document.body
           )
         : null}
-      <div className="z-[-2]  bg-[#F3E9D6] absolute w-[374px] h-[133px] md:w-[410px] md:h-[252px]"></div>
+      <div className="z-[-2] group-hover:bg-[#E8D5B0] bg-[#F3E9D6] absolute w-[374px] h-[133px] md:w-[410px] md:h-[252px]"></div>
       <div className="z-[-1] group-hover:hidden  absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px] hidden md:flex items-center justify-center overflow-hidden">
         <div
           className=" w-[356px] h-[220px] group-hover:hidden md:w-[810px] md:h-[552px] rotate-[5deg] bg-cover"
