@@ -30,8 +30,8 @@ const ProjectInfoCard = ({
           />
         </div>
 
-        <div className="flex items-center md:items-start justify-center md:h-[84%] overflow-scroll flex-col w-full md:w-[45%] ">
-          <h2 className=" font-rubik text-4xl ">
+        <div className="flex items-center py-4 md:items-start justify-center md:h-[84%] overflow-scroll flex-col w-full md:w-[45%] ">
+          <h2 className=" font-rubik text-4xl text-center ">
             {project.content[projectIndex].slidetitle
               ? project.content[projectIndex].slidetitle
               : null}
