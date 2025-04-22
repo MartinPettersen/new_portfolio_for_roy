@@ -70,9 +70,10 @@ html,body {
 }
 
 .paragraph {
-  font-size: 20px;
   font-family: var(--font-work-sans);
 }
+
+
 
 .custom-mouse-pointer {
   cursor: url('/CustomMousePointer.svg'), auto;
