@@ -23,7 +23,7 @@ const AboutButtonField = ({ aboutData }: Props) => {
       </div>
       <div className="flex gap-4 ">
         {aboutData.linkedin ? (
-          <LinkButton url={aboutData.linkedin} label={"linkedin"} />
+          <LinkButton url={aboutData.linkedin} label={"Linkedin"} />
         ) : null}
 
         {aboutData.cv ? (
