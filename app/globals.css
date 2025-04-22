@@ -92,9 +92,21 @@ h2 {
 
 h3 {
   font-weight: bold;
-  font-size: 40;
+  font-size: 22px;
   font-family: var(--font-libre-baskerville);
+}
 
+
+@media (min-width: 768px)  {
+  h3 {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px)  {
+  h3 {
+    font-size: 40px;
+  }
 }
 
 a {

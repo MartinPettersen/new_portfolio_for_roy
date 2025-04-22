@@ -49,7 +49,7 @@ const ProjectCard = ({ project }: Props) => {
       >
         <div className="w-[100%] flex flex-col items-center h-[100%] md:h-[80%] justify-center px-2 ">
           <h3 className=" text-center font-semibold font-libre-baskerville">{title}</h3>
-          <p className="line-clamp-3 text-[22px] flex items-center text-center justify-center leading-6 text-[#181818] font-rubik">
+          <p className="line-clamp-3 text-[16px] font-light md:font-normal md:text-[22px] flex items-center text-center justify-center leading-6 text-[#181818] font-rubik">
             {excerpt}
           </p>
         </div>
