@@ -5,6 +5,7 @@ import TagButton from "./TagButton";
 import ProjectDisplay from "./ProjectDisplay";
 import { createPortal } from "react-dom";
 import ProgressBar from "./ProgressBar";
+import { motion } from "framer-motion";
 
 type Props = {
   project: Project;
@@ -12,13 +13,13 @@ type Props = {
 
 const ProjectCard = ({ project }: Props) => {
   const [toggleProjectDisplay, setToggleProjectDisplay] = useState(false);
-
+  const [toggleFade, setToggleFade] = useState(false)
  
 
   const { _id, title, excerpt, coverimage, progress, tags } = project;
 
   return (
-    <div className="group">
+    <div className="group" onMouseEnter={() => setToggleFade(true)} onMouseLeave={() => setToggleFade(false)}>
       {toggleProjectDisplay
         ? createPortal(
             <ProjectDisplay
@@ -28,18 +29,33 @@ const ProjectCard = ({ project }: Props) => {
             document.body
           )
         : null}
-      <div className="z-[-2] group-hover:bg-[#9E9178] bg-[#F3E9D6] absolute w-[374px] h-[133px] md:w-[410px] md:h-[252px]"></div>
-      <div className="z-[-1] group-hover:hidden  absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px] hidden md:flex items-center justify-center overflow-hidden">
-        <div
-          className=" w-[356px] h-[220px] group-hover:hidden md:w-[810px] md:h-[552px] rotate-[5deg] bg-cover"
+      <div className="z-[-2]  bg-[#F3E9D6] absolute w-[374px] h-[133px] md:w-[410px] md:h-[252px]"></div>
+      <div className="z-[-1]   absolute w-[356px] h-[220px] md:w-[410px] md:h-[252px] hidden md:flex items-center justify-center overflow-hidden">
+        <motion.div
+          className=" w-[356px] h-[220px] md:w-[810px] md:h-[552px] rotate-[5deg] bg-cover"
+          initial={{ opacity: 0.05, scale: 1 }}
+          animate={
+            toggleFade
+              ? {
+                  opacity: 0.03,
+                  scale: 1.5
+                }
+              : {}
+          }
+          transition={{
+            type: "keyframes",
+            duration: 0.2,
+            ease: "easeIn",
+          }}
+          
           style={{
             backgroundImage: `url(${coverimage})`,
-            opacity: 0.05,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
             backgroundSize: "contain"
           }}
-        ></div>
+          
+        ></motion.div>
       </div>
 
       <article
