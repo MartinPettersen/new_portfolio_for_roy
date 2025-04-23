@@ -219,3 +219,7 @@ nav:active {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.bg-svg-pattern {
+  background-image: url("/paper-fiber-texture.svg");
+}
