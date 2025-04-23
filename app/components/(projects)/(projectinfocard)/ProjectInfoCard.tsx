@@ -21,7 +21,7 @@ const ProjectInfoCard = ({
   circleIndex,
 }: Props) => {
   return (
-    <article className="bg-[#E8D5B0]   md:min-h-[70vh] rounded-2xl border-[1px] overflow-scroll lg:overflow-visible shadow-project-card relative z-[10000] w-[100%] md:w-[60%] p-0 flex flex-col items-center justify-start">
+    <article className="bg-[#E8D5B0] bg-svg-pattern-stain bg-center bg-no-repeat bg-contain  md:min-h-[70vh] rounded-2xl border-[1px] overflow-scroll lg:overflow-visible shadow-project-card relative z-[10000] w-[100%] md:w-[60%] p-0 flex flex-col items-center justify-start">
       <div className="flex items-start  w-[100%] md:h-[85%] ">
         <div className="hidden md:flex md:flex-none h-[100%]  items-center justify-center w-[50%] ">
           <ProjectImageContainer

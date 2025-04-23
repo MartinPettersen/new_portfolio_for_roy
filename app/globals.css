@@ -223,3 +223,7 @@ nav:active {
 .bg-svg-pattern {
   background-image: url("/paper-fiber-texture.svg");
 }
+
+.bg-svg-pattern-stain {
+  background-image: url("/coffee-stain.svg");
+}
