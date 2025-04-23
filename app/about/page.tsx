@@ -12,7 +12,7 @@ const page = async () => {
 
   if (!aboutData)
     return (
-      <div className="w-screen h-screen flex items-center justify-center bg-orange-400">
+      <div className="w-screen h-screen flex items-center justify-center ">
         <Loading />
       </div>
     );

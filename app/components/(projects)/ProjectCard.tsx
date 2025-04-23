@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: Props) => {
             toggleFade
               ? {
                   opacity: 0.03,
-                  scale: 1.5
+                  scale: 1.2
                 }
               : {}
           }
