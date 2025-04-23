@@ -20,7 +20,7 @@ const ProjectNavigation = ({
   goTothisIndex,
 }: Props) => {
   return (
-    <div className="text-white md:my-3 md:py-3 w-[100%] md:w-[43%] flex z-[10000] md:h-[10%] items-center justify-evenly">
+    <div className="text-white md:my-3 md:py-3 w-[100%] md:w-[43%] flex z-[10000] md:h-[10%]  items-center justify-evenly">
       <ProjectButtonLeft action={goback} />
       {project.content?.length && (
         <>
