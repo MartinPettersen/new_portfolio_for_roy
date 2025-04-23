@@ -1,10 +1,19 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 import { Typewriter } from "react-simple-typewriter";
 
 
 const Loading = () => {
+
+  const [label, setLabel] = useState("Fetching files")
+
+  setTimeout(() => {
+    setLabel("No Files Found Please Refresh Page")
+  },5000)
+  
+  
+
   return (
     <div className="w-[167px] h-[161px] p-4 m-4 flex items-center justify-center">
       <svg
@@ -26,7 +35,7 @@ const Loading = () => {
         />
         <foreignObject x="0" y="70" width="167" height="161">
           <div className="text-center text-white font-permanent-marker">
-            <span>Fetching files&nbsp;</span>
+            <span>{label}&nbsp;</span>
             <span className="min-w-4 inline-block text-left">
               <Typewriter
                 words={["..."]}
