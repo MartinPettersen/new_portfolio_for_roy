@@ -30,7 +30,7 @@ export async function getProjects(): Promise<Project[]> {
         }`,
         {},
         {
-          next: { revalidate: 14400 }
+          next: { revalidate: 120 }
         }
   )
 }
@@ -62,7 +62,7 @@ export async function getProject(slug: string): Promise<Project> {
         }`,
     { slug },
     {
-      next: { revalidate: 14400 }
+      next: { revalidate: 120 }
     }
   )
 }
@@ -87,7 +87,7 @@ export async function getAbout() {
         }`,
         {},
         {
-          next: { revalidate: 14400 }
+          next: { revalidate: 120 }
         }
   )
   return data[0] || null;
@@ -103,7 +103,7 @@ export async function getSiteData() {
       }`,
     {},
     {
-      next: { revalidate: 14400 }
+      next: { revalidate: 120 }
     }
   )
   return data[0] || null;
