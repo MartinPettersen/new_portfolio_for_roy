@@ -8,7 +8,7 @@ const CombinedNoteNotFound = () => {
       <div className=" absolute z-20 mb-[240px] mr-[200px]">
         <NoteOne label="Error 404" index={20} />
       </div>
-      <div className="absolute z-10 mt-[200px] ml-[200px]">
+      <div className="absolute z-10 mt-[300px] ml-[300px]">
         <NoteTwo
           label="The page you are looking for has not been correctly sorted.
 (it does not exist)"
