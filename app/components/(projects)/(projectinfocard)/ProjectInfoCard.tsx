@@ -21,17 +21,15 @@ const ProjectInfoCard = ({
   circleIndex,
 }: Props) => {
   return (
-    <article className="bg-[#E8D5B0] bg-svg-pattern-stain bg-center bg-no-repeat bg-contain  md:min-h-[70vh] rounded-2xl border-[1px] overflow-scroll lg:overflow-visible shadow-project-card relative z-[10000] w-[100%] md:w-[60%] p-0 flex flex-col items-center justify-start">
+    <article className="bg-[#E8D5B0] bg-svg-pattern-stain bg-center bg-no-repeat bg-contain  md:min-h-[70vh] rounded-2xl border-[1px] overflow-scroll lg:overflow-visible shadow-project-card relative z-[10000] w-[100%] md:w-[70%] p-0 flex flex-col items-center justify-start">
       <div className="flex items-start  w-[100%] md:h-[85%] ">
-        <div className="hidden md:flex md:flex-none h-[100%]  items-center justify-center w-[50%] ">
           <ProjectImageContainer
             project={project}
             projectIndex={projectIndex}
           />
-        </div>
-
-        <div className="flex items-center  py-4 md:items-start justify-center md:h-[84%] overflow-scroll lg:overflow-visible flex-col w-full md:w-[50%] ">
-          <h2 className=" font-rubik text-4xl ">
+        
+        <div className="flex  items-center  py-4 md:items-start justify-center md:h-[100%] overflow-scroll lg:overflow-visible flex-col w-full md:w-[50%] ">
+          <h2 className=" font-rubik text-4xl w-[80%]">
             {project.content[projectIndex].slidetitle
               ? project.content[projectIndex].slidetitle
               : null}
