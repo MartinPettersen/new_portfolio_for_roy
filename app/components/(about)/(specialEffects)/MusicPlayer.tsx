@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import Image from "next/image";
+import BigRedButton from "./BigRedButton";
 
 export default function MusicPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -19,13 +19,8 @@ export default function MusicPlayer() {
   return (
     <div>
       <button onClick={handlePlay}>
-        <Image
-          className="w-full h-full shadow-project-image custom-mouse-pointer"
-          src="/pinkFrog.png"
-          alt="Pink frog"
-          width={400}
-          height={400}
-        />
+        
+        <BigRedButton />
       </button>
     </div>
   );

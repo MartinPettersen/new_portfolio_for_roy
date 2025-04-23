@@ -15,7 +15,7 @@ const HiddenImage = () => {
     }
 
   return (
-    <div onClick={handleToggleDraw} className="w-[90%] custom-mouse-pointer h-[90%] md:w-[400px] md:h-[400px] z-[5] rotate-0 absolute flex items-center justify-center">
+    <div onClick={handleToggleDraw} className="w-[90%]  h-[90%] md:w-[400px] md:h-[400px] z-[5] rotate-0 absolute flex items-center justify-center">
       
       {toggleDraw? 
       <>
