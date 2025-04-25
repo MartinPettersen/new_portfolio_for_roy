@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Project } from "@/types/Project";
 import Loading from "../(loading)/Loading";
 import ProjectInfoCard from "./(projectinfocard)/ProjectInfoCard";
@@ -9,8 +9,25 @@ type Props = {
   setToggleDisplay: (value: boolean) => void;
 };
 
+const useKeyDown = (handler: (event: KeyboardEvent) => void, deps: React.DependencyList = [])=> {
+  useEffect(() => {
+    const listener = (event: KeyboardEvent) => handler(event);
+    document.addEventListener("keydown", listener);
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  }, deps)
+}
+
 const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
   const [projectIndex, setProjectIndex] = useState(0);
+
+
+  useKeyDown((e) => {
+    if (e.key === "Escape") {
+      setToggleDisplay(false);
+    }
+  })
 
   if (!project || !project.content) return <Loading />;
 

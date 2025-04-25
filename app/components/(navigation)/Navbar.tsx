@@ -5,6 +5,9 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pages = [{name: "Prosjekter", url: "/"}, {name: "About", url: "/about"}];
+
+  
+  //  {name: "Blog", url: "/blog"}
   const pathname = usePathname();
 
   return (
