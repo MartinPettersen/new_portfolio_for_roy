@@ -13,7 +13,7 @@ const ProjectField = async () => {
 
 
   return (
-    <div className="grid grid-cols-1 py-24 grid-cols-between xl:grid-cols-3 gap-2 md:gap-10 items-center justify-evenly">
+    <div className="grid grid-cols-1 py-24 grid-cols-between xl:grid-cols-3  grid-cols-between-max gap-2 md:gap-10 items-center justify-evenly">
       {projects.map((project) => (
         <ProjectCard key={project._id} project={project} />
       ))}
