@@ -11,6 +11,7 @@ type Props = {
 
 const ImageContainer = ({ portrait, fullName }: Props) => {
   const [isFalling, setIsFalling] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false)
 
   const handlePushPinClick = () => {
     setIsFalling(true);
@@ -20,7 +21,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
 
   return (
     <div className="w-[185px] h-[185px] md:w-[600px] flex relative items-center justify-center md:h-[600px] bg-[#F3E9D6] inner-shadow-image-card">
-      <HiddenImage />
+      <HiddenImage hasPlayed={hasPlayed} setHasPlayed={setHasPlayed}/>
       <motion.div
         onClick={handlePushPinClick}
         className={`top-[0] md:top-[-20] left-[65%] z-[30] absolute custom-mouse-pointer
