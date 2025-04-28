@@ -72,7 +72,7 @@ const ProjectInfo = ({ project, setToggleDisplay }: Props) => {
         className="w-screen h-screen bg-[#D9D9D92B] backdrop-blur-sm absolute z-[9999]"
         onClick={() => setToggleDisplay(false)}
       ></div>
-      <ProjectInfoCard goTothisIndex={goTothisIndex} nextProject={nextProject} circleIndex={circleIndex} project={project} goback={goback} projectIndex={projectIndex}/>
+      <ProjectInfoCard setToggleDisplay={setToggleDisplay} goTothisIndex={goTothisIndex} nextProject={nextProject} circleIndex={circleIndex} project={project} goback={goback} projectIndex={projectIndex}/>
     </div>
   );
 };
