@@ -3,6 +3,7 @@ import ProjectNavigation from "../(project pagination)/ProjectNavigation";
 import { Project } from "@/types/Project";
 import { PortableText } from "@portabletext/react";
 import ProjectImageContainer from "./ProjectImageContainer";
+import ProjectImageContainerMobile from "./ProjectImageContainerMobile";
 
 type Props = {
   project: Project;
@@ -38,8 +39,8 @@ const ProjectInfoCard = ({
               ? project.content[projectIndex].slidetitle
               : null}
           </h2>
-          <div className="md:hidden w-[50%]">
-            <ProjectImageContainer
+          <div className="md:hidden w-[90%] flex items-center justify-center">
+            <ProjectImageContainerMobile
               project={project}
               projectIndex={projectIndex}
             />
