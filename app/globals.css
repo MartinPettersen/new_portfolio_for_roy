@@ -103,6 +103,33 @@ h3 {
   font-family: var(--font-libre-baskerville);
 }
 
+#about
+{
+
+  p {
+  }
+  
+h1 {
+  font-family: var(--font-libre-baskerville);
+
+}
+
+h2 {
+  font-family: var(--font-rubik);
+  font-size: 24px;
+  padding-top: 20px;
+  line-height: 1.2;
+
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 22px;
+
+  font-family: var(--font-libre-baskerville);
+}
+}
+
 
 @media (min-width: 768px)  {
   h3 {
