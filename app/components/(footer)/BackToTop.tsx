@@ -28,7 +28,7 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-3 pointer-events-none w-screen flex justify-center items-center z-[9900] ">
+    <div className="fixed bottom-3 left-12 pointer-events-none z-[9900] ">
       {isVisible && (
         <button className="group pointer-events-auto" type="button" onClick={goBackToTop}>
           <svg
@@ -42,7 +42,7 @@ const BackToTop = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              className="transition-colors fill-[#90CCC5] group-hover:fill-[#1D6B62]"
+              className="transition-colors fill-[#F05D5F] group-hover:fill-[#FFAA75]"
               d="M23.9469 2.4421C25.5261 -0.81404 29.4739 -0.814031 31.0531 2.44211L54.4442 50.6737C56.0234 53.9298 54.0494 58 50.8911 58L4.10886 58C0.950565 58 -1.02336 53.9298 0.555786 50.6737L23.9469 2.4421Z"
               fill="#90CCC5"
             />
