@@ -30,7 +30,7 @@ const BackToTop = () => {
   return (
     <div className="fixed bottom-3 pointer-events-none w-screen flex justify-center items-center z-[9900] ">
       {isVisible && (
-        <button className="group" type="button" onClick={goBackToTop}>
+        <button className="group pointer-events-auto" type="button" onClick={goBackToTop}>
           <svg
             className={
               "svg-shadow custom-mouse-pointer transition-colors scale-50 group-hover:scale-60"
