@@ -20,7 +20,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
   const offScreenDistance = 2000;
 
   return (
-    <div className="w-[185px] h-[185px] md:w-[600px] flex relative items-center justify-center md:h-[600px] bg-[#F3E9D6] inner-shadow-image-card">
+    <div className="w-[185px] h-[185px] md:w-[300px] md:h-[300px] xl:w-[600px] xl:h-[600px] flex  relative items-center justify-center  bg-[#F3E9D6] inner-shadow-image-card">
       <HiddenImage hasPlayed={hasPlayed} setHasPlayed={setHasPlayed}/>
       <motion.div
         onClick={handlePushPinClick}
@@ -50,7 +50,7 @@ const ImageContainer = ({ portrait, fullName }: Props) => {
         <PushPin />
       </motion.div>
       <motion.div
-        className="w-[90%] h-[90%] md:w-[500px] md:h-[500px] z-[20] absolute"
+        className="w-[90%] h-[90%] md:w-[280px] md:h-[280px] xl:w-[500px] xl:h-[500px] z-[20] absolute"
         initial={{ rotate: 3 }}
         animate={
           isFalling
