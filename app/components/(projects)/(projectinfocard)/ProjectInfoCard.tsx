@@ -73,7 +73,7 @@ const ProjectInfoCard = ({
                           href={project.content[projectIndex].url}
                           className="font-space-mono underline italic font-rubik "
                         >
-                          {project.content[projectIndex].url}
+                          {project.content[projectIndex].urllabel}
                         </a>
                       ) : null}
                     </>
