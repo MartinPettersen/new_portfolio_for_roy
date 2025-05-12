@@ -4,7 +4,7 @@ import React from "react";
 
 const BigRedButton = () => {
   return (
-    <div className="group custom-mouse-pointer ">
+    <div className="group custom-mouse-pointer relative w-[140px] h-[140px] md:w-[440px] md:h-[440px]">
       <div className=" z-[10]">
       <Image src={"/WarningButton.png"} className=" red-button-shadow" alt="red warning button" fill={true} />
       </div>
