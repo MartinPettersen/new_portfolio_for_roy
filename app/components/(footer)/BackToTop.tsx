@@ -28,7 +28,7 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-3 left-12 pointer-events-none z-[9900] ">
+    <div className="fixed bottom-3 left-3 pointer-events-none z-[9900] ">
       {isVisible && (
         <button className="group pointer-events-auto" type="button" onClick={goBackToTop}>
           <svg
