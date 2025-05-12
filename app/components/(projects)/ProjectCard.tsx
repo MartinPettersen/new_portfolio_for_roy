@@ -44,7 +44,7 @@ const ProjectCard = ({ project }: Props) => {
           }
           transition={{
             type: "keyframes",
-            duration: 0.2,
+            duration: 0.15,
             ease: "easeIn",
           }}
           
