@@ -28,20 +28,23 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-3 right-3 z-[9900] ">
+    <div className="fixed bottom-3 w-screen flex justify-center items-center z-[9900] ">
       {isVisible && (
-        <button className="" type="button" onClick={goBackToTop}>
+        <button className="group" type="button" onClick={goBackToTop}>
           <svg
-            className="custom-mouse-pointer"
-            width="72"
-            height="81"
-            viewBox="0 0 72 81"
+            className={
+              "svg-shadow custom-mouse-pointer transition-colors scale-50 group-hover:scale-60"
+            }
+            width="55"
+            height="58"
+            viewBox="0 0 55 58"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M3 45.6962C-1.00001 43.3868 -0.999994 37.6133 3.00001 35.3039L62.25 1.09587C66.25 -1.21353 71.25 1.67323 71.25 6.29203L71.25 74.708C71.25 79.3268 66.25 82.2136 62.25 79.9042L3 45.6962Z"
-              fill="#8E9FB6"
+              className="transition-colors fill-[#90CCC5] group-hover:fill-[#1D6B62]"
+              d="M23.9469 2.4421C25.5261 -0.81404 29.4739 -0.814031 31.0531 2.44211L54.4442 50.6737C56.0234 53.9298 54.0494 58 50.8911 58L4.10886 58C0.950565 58 -1.02336 53.9298 0.555786 50.6737L23.9469 2.4421Z"
+              fill="#90CCC5"
             />
           </svg>
         </button>
