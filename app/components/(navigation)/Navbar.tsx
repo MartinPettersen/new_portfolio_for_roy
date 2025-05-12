@@ -4,7 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const pages = [{name: "Prosjekter", url: "/"}, {name: "About", url: "/about"}];
+  const pages = [{name: "Projects", url: "/"}, {name: "About", url: "/about"}];
 
   
   //  {name: "Blog", url: "/blog"}
