@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/(header)/Header";
 import Papers from "./components/(paper)/Papers";
 import Navbar from "./components/(navigation)/Navbar";
+import BackToTop from "./components/(footer)/BackToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -69,11 +70,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} ${rubik.variable} ${workSans.variable} ${spaceMono.variable} ${permanentMarker.variable} antialiased md:p-6 pt-8 md:pt-0 relative `}
       >
-        <div className="z-[1] min-w-full ">
+        <div className="z-[1] min-w-full " id="top">
           <Header />
           <Navbar />
           <Papers />
           {children}
+          <BackToTop />
         </div>
       </body>
     </html>
