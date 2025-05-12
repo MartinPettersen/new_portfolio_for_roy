@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 
 const BackToTop = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
 
   const goBackToTop = () => {
     window.scrollTo({
